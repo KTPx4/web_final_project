@@ -1,9 +1,5 @@
-
-<div class="notfound">
-        <h1>
-            <strong>404</strong>
-            <p>PAGE NOT FOUND</p>
-        </h1>
-</div><?php 
-    
-?>
+<div class="container">
+      <h1>404.</h1>
+      <h2>Not Found Data</h2>
+      <p>Sorry, we could not find any data for this page.</p>
+    </div>
