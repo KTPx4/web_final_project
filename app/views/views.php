@@ -10,5 +10,23 @@
 </head>
 <body>
     
-</body>
+    
+<nav>
+    <div class="navbar">
+            <div class="navbar-inner">
+                <ul>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">DẠNG ANIME</a></li>
+                    <li><a href="#">TOP ANIME</a></li>
+                    <li><a href="#">THỂ LOẠI</a></li>
+                    <li><a href="#">SEASON</a></li>
+                    <li><a href="#">THƯ VIỆN</a></li>
+                    <li><a href="#">LỊCH CHIẾU</a></li>
+                </ul>
+            </div>
+    </div>
+    
+</nav>
+
+
 </html>
