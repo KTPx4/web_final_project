@@ -71,9 +71,9 @@
             $control = new $this->controller; // create new object controller
             // echo $this->action . "<br/>" . $this->controller;
         //    $this->controller = new $this->controller; // create new object controller
-            print_r($this->controller);
-            print_r($this->action);
-            print_r($this->paramas);
+            // print_r($this->controller);
+            // print_r($this->action);
+            // print_r($this->paramas);
            call_user_func_array(array($control, $this->action), array($this->paramas));// call function in controller:(callback, array aguments)
            //https://www.php.net/manual/en/function.call-user-func-array.php
 
