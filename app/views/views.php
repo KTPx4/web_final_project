@@ -18,32 +18,25 @@
         padding: 10px;
     }
     </style> -->
+<nav>
+    <ul>
+        <li>
+    </ul>
+</nav>
 </head>
 <body>
-    <h1>This is view for home</h1>
-    <table>
-    <?php
-    
-        foreach(array_keys($array_info) as $a)
-        {
-    ?>
-            <tr>
-                <td><?=$a?>:</td>
-                <td><?=$array_info[$a]?></td>
-            </tr>
-
-    <?php 
-        }
-
-        
-    ?>
-
-    </table>
-    <div class="a header">header</div>
-    <!-- <div class="a content">content</div> -->
-    <div class="a content">
-        <?php require_once $detail ?>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul>
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">DẠNG ANIME</a></li>
+                <li><a href="#">TOP ANIME</a></li>
+                <li><a href="#">THỂ LOẠI</a></li>
+                <li><a href="#">SEASON</a></li>
+                <li><a href="#">THƯ VIỆN</a></li>
+                <li><a href="#">LỊCH CHIẾU</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="a footer">footer</div>
 </body>
 </html>
