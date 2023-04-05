@@ -1,3 +1,7 @@
+<?php
+  $root_img='http://'.$_SERVER['HTTP_HOST'] . "/public/img/";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +16,7 @@
 
 <div class="navbar">
   <div class="logo">
-    <a href="#"><img src="logo.png" alt="Logo"></a>
+    <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
   </div>
   <div class="menu">
     <a href="/home">TRANG CHỦ</a>
@@ -40,6 +44,7 @@
     ?>
 </div>
 
+
 <div class="footer">
   <ul>
     <li class="page"><a href="">1</a></li>
@@ -50,6 +55,6 @@
   </ul>
 </div>
 
-</body>
 
+</body>
 </html>
