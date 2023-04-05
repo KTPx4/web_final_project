@@ -15,7 +15,7 @@
     <a href="#"><img src="logo.png" alt="Logo"></a>
   </div>
   <div class="menu">
-    <a href="#">Trang chủ</a>
+    <a href="#">TRANG CHỦ</a>
     <a href="#">Giới thiệu</a>
     <div class="dropdown">
       <a href="#">Dịch vụ</a>
