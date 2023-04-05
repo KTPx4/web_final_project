@@ -9,6 +9,7 @@
 
 </head>
 <body>
+
 <div class="navbar">
   <div class="logo">
     <a href="#"><img src="logo.png" alt="Logo"></a>
@@ -32,6 +33,7 @@
     <span></span>
   </div>
 </div>
+
 
 </body>
 
