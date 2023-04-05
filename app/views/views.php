@@ -19,7 +19,7 @@
     <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
   </div>
   <div class="menu">
-    <a href="#">TRANG CHỦ</a>
+    <a href="/home">TRANG CHỦ</a>
     <a href="#">Giới thiệu</a>
     <div class="dropdown">
       <a href="#">Dịch vụ</a>
@@ -36,6 +36,25 @@
     <span></span>
     <span></span>
   </div>
+  
 </div>
+<div class="content">
+    <?php 
+        require_once  $detail ;
+    ?>
+</div>
+
+
+<div class="footer">
+  <ul>
+    <li class="page"><a href="">1</a></li>
+    <li class="page"><a href="">2</a></li>
+    <li class="page"><a href="">3</a></li>
+    <li class="page"><a href="">4</a></li>
+    <li class="page"><a href="">5</a></li>
+  </ul>
+</div>
+
+
 </body>
 </html>

@@ -30,6 +30,7 @@ class controllers{
             }
             else{
                 $detail ="./app/views/pages/notfound.php";
+                
             }
             
            
