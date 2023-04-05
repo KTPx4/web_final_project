@@ -1,6 +1,6 @@
 <?php 
     // require_once __DIR__ . "./app/core/controllers.php";
-    require_once "./app/core/controllers.php";
+    // require_once "./app/core/controllers.php";
     class Home extends controllers{
         // default method call in class home 
         function Sayhi($arr_para)
@@ -42,7 +42,7 @@
             $para = $arr_para;
             if(count($arr_para) < 1)
             {
-                $para = array(0=> 'home');
+                $para = array('page'=> 'home');
             }
             $this->view("views", $arr, $para);
 
