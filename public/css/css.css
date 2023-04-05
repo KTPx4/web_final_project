@@ -82,18 +82,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* logo */
 .logo {
   flex: 1;
-}
-
-.logo img {
-  max-width: 100%;
-  height: auto;
 }
 
 /* menu */
