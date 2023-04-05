@@ -1,5 +1,5 @@
 <?php 
-    require_once "./app/core/controllers.php";
+    // require_once "./app/core/controllers.php";
    
     class NotFound extends controllers{
         function Show($arr)
@@ -21,7 +21,7 @@
 
             // $arr = $model->Get_values_test();
             
-            $this->view("views",array(), $arr);
+            $this->view("views",array(), array('page'=>'notfound'));
 
             // echo "<br/> show in Home" . "<br/>";
         }

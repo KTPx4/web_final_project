@@ -6,11 +6,11 @@ div.a{
     margin: 10px;
     text-align: center;
     padding: 10px;
-    color: rgb(9, 248, 49);
+    /* color: rgb(9, 248, 49); */
 }
-div.content{
+/* div.content{
     color: rgb(9, 248, 49);
-}
+} */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;

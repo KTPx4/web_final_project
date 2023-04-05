@@ -15,7 +15,14 @@ class controllers{
         $detail = "./app/views/pages/home.php";
         if(count($arr_para) > 0)
         {
-            $path = "./app/views/pages/" . $arr_para[0] . ".php";
+            if(isset($arr_para['page']))
+            {
+                if($arr_para['page'] == 'notfound')
+                {
+                    $detail = "./app/views/pages/notfound.php";
+                }
+            }
+            $path = "./app/views/pages/" . $arr_para['page'] . ".php";
             // $detail = $path;
             if(file_exists($path))
             {
@@ -31,7 +38,7 @@ class controllers{
         {
 
         }
-       
+      
         $array_info = $arr;
         require_once "./app/views/" . $view . ".php";
     }
