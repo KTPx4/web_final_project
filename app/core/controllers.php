@@ -15,21 +15,27 @@ class controllers{
         $detail = "./app/views/pages/home.php";
         if(count($arr_para) > 0)
         {
-            if(isset($arr_para['page']))
+            if(isset($arr_para['page'])) // array('page' => '')
             {
                 if($arr_para['page'] == 'notfound')
                 {
-                    $detail = "./app/views/pages/notfound.php";
+                   // $detail = "./app/views/pages/notfound.php";
+                   // 
+                }
+                else{
+
                 }
             }
-            $path = "./app/views/pages/" . $arr_para['page'] . ".php";
+            $path = "./app/views/pages/" . $arr_para['page'][0] . ".php";
+          
+            print_r( $path );
             // $detail = $path;
             if(file_exists($path))
             {
                 $detail = $path;
             }
             else{
-                $detail ="./app/views/pages/notfound.php";
+                //$detail ="./app/views/pages/notfound.php";
                 
             }
             

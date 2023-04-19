@@ -4,3 +4,14 @@
     width: 50px;
     margin: 10px;
   }
+
+.top-10{
+  max-width: 50px;
+  max-height: 50px;
+
+}
+.top{
+  
+  display: flex;
+  float: left;
+}
