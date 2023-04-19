@@ -21,7 +21,7 @@
 
             // $arr = $model->Get_values_test();
             
-            $this->view("views",array(), array('page'=>'notfound'));
+            $this->view("NotFound",array(), array());
 
             // echo "<br/> show in Home" . "<br/>";
         }
