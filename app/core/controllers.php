@@ -28,7 +28,7 @@ class controllers{
             }
             $path = "./app/views/pages/" . $arr_para['page'][0] . ".php";
           
-            print_r( $path );
+          
             // $detail = $path;
             if(file_exists($path))
             {
