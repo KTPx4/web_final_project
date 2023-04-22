@@ -43,9 +43,7 @@
 
             $para = $arr_para;
            
-            echo "Home - controllers ";
-            print_r($para);
-            
+         
             if(count($arr_para) < 1)
             {
                 $para = array('page'=> 'home');
