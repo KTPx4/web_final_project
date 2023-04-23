@@ -98,7 +98,7 @@
         {
             if(isset($_GET["url"]))
             {
-                print_r(explode("/", filter_var(trim($url = $_GET["url"], "/"))));
+                // print_r(explode("/", filter_var(trim($url = $_GET["url"], "/"))));
                 return explode("/", filter_var(trim($url = $_GET["url"], "/")));
             }
             else{
