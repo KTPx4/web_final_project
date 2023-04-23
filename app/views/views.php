@@ -14,13 +14,66 @@
     <title><?=$title?></title>
 
     <link rel="stylesheet" href="<?=HOST?>/public/css/home.css" type="text/css">
-  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   </head>
   <body>
+      <div class="menu">
+        <p>menu </p>
+      </div>
+      <div class="content">
+          <div class="content-change">
+            
+              <?php 
+                  require_once($pathPage);
+              ?>    
+          
+          </div>
+          
+          <div class="top-update">
+              <table class="table-top-update">
+                <tr class="tr-top-update">              
+                  <td><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update"></img></a></td>
+                  <td>description 1</td>
+                </tr>
+                <tr class="tr-top-update">
+                  <td><a href="<?=HOST?>/home/viewFilm?name=top-update-2"><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update"></img></a></td>
+                  <td>description 2</td>
+                </tr>
+                <tr class="tr-top-update">
+                  <td><a href="<?=HOST?>/home/viewFilm?name=top-update-3"><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update"></img></a></td>
+                  <td>description 3</td>
+                </tr>
+                <tr class="tr-top-update">
+                  <td><a href="<?=HOST?>/home/viewFilm?name=top-update-4"><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update"></img></a></td>
+                  <td>description 4</td>
+                </tr>
+                <tr class="tr-top-update">
+                  <td><a href="<?=HOST?>/home/viewFilm?name=top-update-5"><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update"></img></a></td>
+                  <td>description 5</td>
+                </tr>
+                
+              </table>
+          </div>
 
-    <?php 
-        require_once($pathPage);
-    ?>
+      </div>
+
+      <div class="footer">
+          <div class="description">
+              <p style="text-align: center;">Web Programming and Applications</p>
+              <p><i class="fa-solid fa-copyright" style="color: #000000;"></i></i>Copyright belongs to Group 18 ( N2_HK2_2223_503073 )</p>
+              <p><i class="fa-solid fa-calendar-days" style="color: #000000;"></i>The execution time is from April 7th to May 7th.</p>
+              <p><i class="fa-regular fa-circle-check" style="color: #000000;"></i>Final Project</p>
+          </div>
+
+          <div class="member">
+              <p style="text-align: center; margin-bottom: 0px;">Member</p>
+              <a href="https://www.facebook.com/px4.k3"><i class="fa-brands fa-facebook" style="color: #5b68c0;"></i>Kiều Thành Phát - 521H0125</a>
+              <a href="https://www.facebook.com/profile.php?id=100015495856167"><i class="fa-brands fa-facebook" style="color: #5b68c0;"></i>Trần Đặng Đăng Khoa - 521H0086</a>
+              <a href="https://www.facebook.com/thuc.nguyenhuu.5494"><i class="fa-brands fa-facebook" style="color: #5b68c0;"></i>Nguyễn Trí Thức - 521H0311</a>
+          </div>
+      </div>
 
   </body>
 </html>
