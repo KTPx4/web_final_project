@@ -10,45 +10,21 @@ class controllers{
     }
 
     // show view for user
-    public function view($view, $arr, $arr_para)
+    public function view($view, $Data, $page)
     {
-        $detail = "./app/views/pages/home.php";
-        if(count($arr_para) > 0)
-        {
-            if(isset($arr_para['page'])) // array('page' => '')
-            {
-                if($arr_para['page'] == 'notfound')
-                {
-                   // $detail = "./app/views/pages/notfound.php";
-                   // 
-                }
-                else{
+       
+        $array_info = $Data; // data from database
+        
+        $arr_page = explode(".", $page); // "home.html" => 'home' , 'html'
+        
+        $title = $arr_page[0]; // title of page is firt char
 
-                }
-            }
-            $path = "./app/views/pages/" . $arr_para['page'][0] . ".php";
-          
-          
-            // $detail = $path;
-            if(file_exists($path))
-            {
-                $detail = $path;
-            }
-            else{
-                //$detail ="./app/views/pages/notfound.php";
-                
-            }
-            
-           
-        }
-        else
-        {
+        $pathPage = "./app/views/pages/" .$page ;
 
-        }
-      
-        $array_info = $arr;
         require_once "./app/views/" . $view . ".php";
+
     }
+
 }
     
 ?>

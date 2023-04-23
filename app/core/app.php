@@ -1,104 +1,68 @@
-﻿<?php
+﻿<?php 
     class App{
         protected $controller = "NotFound";
-        protected $action = "Show";
-        protected $paramas = array('page'=> 'notfound');
-
+        protected $page = 'home.html';
 
         function __construct()
         {
-            $arr = $this->URL();// url sau "/" 
- 
-            $check_exists = 1;
-
-          
-         
-            $par = array('page'=> 'notfound');
-
-            if(count($arr) > 0)
+            $URL = $this->URL();
+            // print_r($URL);
+            if(count($URL) > 0)
             {
-                 // xử lý controller:
-                if(file_exists("./app/controllers/".$arr[0].".php")) //"http://localhost/Home/a" arr -> [Home, a] => arr[0] = Home
+                // if exists Controller -> call this controller
+                if(file_exists("./app/controllers/".$URL[0].".php")) 
                 {
-                    $contr = $arr[0];
-
-                    unset($arr[0]);
-
-                    require_once "./app/controllers/". $contr.".php";
                     
-                    if(isset($arr[1]))
+                    $this->controller = $URL[0];
+                    unset($URL[0]);
+
+                    if(isset($URL[1]))
                     {
-                        if(method_exists( $contr, $arr[1])) 
+                        if(file_exists("./app/views/pages/".$URL[1].".html"))
                         {
-                            $act = $arr[1];
+                          
+                            $nameFile =  $URL[1].".html";
+                            $this->page =  $nameFile;
                         }
-                      
-                        unset($arr[1]);
-                        
-                        $par = $arr ? array_values($arr) : [];
+                        else
+                        {
+                            $this->controller = "NotFound";
+
+                        }
+                        unset($URL[1]);
                     }
-                    else // khong truyen action
-                    {
-                        $act = "show";
-                        $par=[];
-                    }
-                   
-                    //echo "ok";
-                   
-                }
-              
-                if(isset($contr) && isset( $act))
-                {
-                    $this->controller = $contr;
-                    $this->action= $act;
-                    $this->paramas = $par ? array('page'=>array_values($arr)) : [];
                 }
                 else
                 {
-                    require_once "./app/controllers/NotFound.php";
+                    $this->controller = "NotFound";
+                    $this->page = 'home.html';
                 }
-               
-                
 
-                
-               
-                // xu ly params
-                
-            }
-            else // neu khonh nhap gi tren url
+            } 
+            else
             {
                 $this->controller = "Home";
-                $this->action = "Show";
-                $this->paramas = array('page'=> 'home');
-                require_once "./app/controllers/Home.php";
+                $this->page = 'home.html';
             }
-          
-            // * 
-            $control = new $this->controller; // create new object controller
-            // echo $this->action . "<br/>" . $this->controller;
-        //    $this->controller = new $this->controller; // create new object controller
-            // print_r($this->controller);
-            // print_r($this->action);
             
-            //echo  "core/app " . "<br/>"; 
-           // print_r($this->paramas);
+            // print_r($this->page);
 
-           call_user_func_array(array($control, $this->action), array($this->paramas));// call function in controller:(callback, array aguments)
-           //https://www.php.net/manual/en/function.call-user-func-array.php
+            require_once "./app/controllers/". $this->controller .".php";
 
+            $ctrl = new $this->controller;
+            
+          
+            $p = array($this->page);
 
-
-        //    echo $this->controller . "<br/>";
-        //    echo $this->action . "<br/>";
-        //    print_r($this->paramas) . "<br/>";
-
+            call_user_func_array(array($ctrl, "Show"), $p);// call function in controller:(callback, array aguments)
         }
+
 
         function URL()
         {
             if(isset($_GET["url"]))
             {
-                print_r(explode("/", filter_var(trim($url = $_GET["url"], "/"))));
+               // print_r(explode("/", filter_var(trim($url = $_GET["url"], "/"))));
                 return explode("/", filter_var(trim($url = $_GET["url"], "/")));
             }
             else{
