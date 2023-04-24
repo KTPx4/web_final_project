@@ -19,10 +19,50 @@
 
   </head>
   <body>
-      <div class="menu">
-        <p>menu </p>
+  <div id="wrapper">
+  <div id="header">
+    <div class="navbar">
+      <div class="logo-text">
+        <div class="logo">
+          <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
+        </div>
+        <div class="text">CINEMA</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="menu">
+    <a href="#">ANIME</a>
+
+        <div class="dropdown">
+          <a href="#">GENRES</a>
+          <div class="dropdown-content">
+          <a href="#">Detective</a>
+          <a href="#">Adventure</a>
+          <a href="#">Action Anime</a>
+          <a href="#">Romantic Comedy</a>
+          <a href="#">Science Fiction</a>
+        </div>
       </div>
 
+        <div class="dropdown">
+        <a href="#">TOP ANIME</a>
+        <div class="dropdown-content">
+          <a href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a>
+          <a href="#">One Piece - Đảo Hải Tặc (1999)</a>
+          <a href="#">Naruto - Cửu Vĩ Hồ (2002)</a>
+          <a href="#">Conan Movie 25 - Nàng Dâu Halloween (2022)</a>
+          <a href="#">Pocket Monsters - Pokemon (1997)</a>
+        </div>
+      </div>
+
+        <a href="#">SEASON</a>
+        <a href="#">LIBRARY</a>
+        <a href="#">COMMING SOON</a>
+  </div>
+      
       <div class="content dark-mode">
           <div class="content-change">
             
