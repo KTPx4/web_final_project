@@ -1,45 +1,161 @@
-body{
-  max-width: 2260px;
-  height: 2000px;
+
+*{
+    box-sizing: border-box;
+   
 }
 
-div.menu{
-  border: 1px solid black;
-  height: 3%;
-  width: auto;
+html, body {
+   
+    padding: 0;
+    
+    max-width: 1920px;
+    height: 2000px;
+    /* min-width: 660px; */
+    margin: 0 auto;
+    background-color: #131313;
+    color: white;
 }
+
+
+
+
+/* menu bar */
+div.menu{
+  border: 1px solid rgb(255, 255, 255);
+  height: 3%;
+  width: 100%;
+}
+
+
 
 div.content{
-  border: 1px solid black;
-  height: 90%;
+  border: 1px solid rgb(255, 255, 255);
+  height: 70%;
   display: flex;
 
 }
+
+/* content change in left */
 div.content-change{
-  width: 80%;
-  border: 1px solid black;
+  width: 79%;
+  border: 1px solid rgb(255, 255, 255);
 
 }
-div.top-update{
-  width: 20%;
-  height: 50%;
-  border: 1px solid black;
 
+/* content not change in right */
+div.top-update{ 
+  width: 19%;
+  height: 50%;
+  border: 1px solid rgb(255, 255, 255);  
+  background-color: rgba(157, 153, 153, 0.69) ;
+}
+.label-top-update{
+  height: 5%;
+  text-align: center;
+  border-bottom: 2px solid greenyellow;
+  font-family:  'Arial Narrow Bold', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.table-top-update{
+  width: 100%;
+  height: 95%;
+  overflow: scroll;
+  margin-top: 5px;
 }
 .tr-top-update{
   display: flex;
   margin: 50px 10px;
   padding: 0px
 }
-
 .img-top-update{
   max-width: 100px;
-  max-height: 100px;
+  width: auto;
+
+}
+
+
+/* content top film */
+div.top-film{
+  height: 20%;
+  width: 100%;
+  border: 1px solid rgb(63, 255, 5);
+  color: white;
+}
+div.label-top-film{
+  border: 1px solid rgb(5, 197, 255);
+  height: 10%;
+  width: auto;
+  margin-left: 10px;
+}
+div h2{ 
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+div.content-top-film{
+  border: 1px solid rgb(213, 5, 255);
+  border-radius: 15px;
+  height: 80%;
+  width: auto;
+  background-color: rgba(157, 153, 153, 0.69) ;
+  padding: 0;
+  margin: 0px 70px;
+}
+div.page-number{
+  border: 1px solid rgb(5, 184, 255);
+  height: 10%;
+  width: 100%; 
+}
+div.numParent{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 0px;
+  width: auto;
+}
+div.num{
+  width: 20px;
+  padding: 0px;
+  border: 1px solid #0affff;
+  background-color: #46E1FF;
+ 
+  border-radius: 100px;
+  margin: 0px 10px;
+  text-align: center;
+}
+div.page-number a{
+  height: 100%;
+  width: 100%;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+}
+
+.table-top-film{
+  width: 100%;
+  height: 95%;
+  overflow: scroll;
+  margin-top: 5px;
+}
+.tr-top-film{
+  float: left;
+  display: flex;
+  margin: 10px 10px;
+  padding: 0px;
+
+}
+.img-top-film{
+  max-width: 100px;
+  min-width: 50px;
+  min-height: 60px;
+  width: auto;
 
 }
 
 
 
+
+/* footer */
 div.footer{
   height: 7%;
   width: 100%;
@@ -50,19 +166,54 @@ div.footer{
   /* float: left; */
   justify-content: center;
 }
+div.footer p ,a{
+  margin: 10px 0 10px 5px;
+  text-decoration: none;
+  color: black;
+  
+}
 div.description{
-  margin-right: 50px;
+  margin-right: 5%;
 }
 div.member{
   display: grid;
-  margin-left: 70px;
+  margin-left: 5%;
   padding: 0px;
+  
 }
 i{
   margin-right: 5px;
 }
-a{
-  
-  text-decoration: none;
-  color: black;
+
+
+.menu, .content, .top-film , .footer{
+  min-width: 335px;
+}
+/* @media only screen and (max-width: 960px) {
+ 
+  html, body{
+    padding: 0;
+    max-width: 2060px;
+    min-width: 960px;
+    margin: 0 auto;
+}
+} */
+
+/* @media screen and (max-width: 660px){
+  html{
+      width: 330px;
+      overflow: auto;
+  }
+} */
+
+
+@media screen and (max-width: 960px)
+{
+   img{
+    width: 40px;
+    height: 60px;
+   }
+   .content-top-film{
+      width: 320px;
+   }
 }
