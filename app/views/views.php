@@ -14,27 +14,20 @@
     <title><?=$title?></title>
 
     <link rel="stylesheet" href="<?=HOST?>/public/css/home.css" type="text/css">
+    <link rel="stylesheet" href="<?=HOST?>/public/css/cssElm.css" type="text/css">
+    <link rel="stylesheet" href="<?=HOST?>/public/css/cssImg.css" type="text/css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   </head>
   <body>
-  <div id="wrapper">
-  <div id="header">
-    <div class="navbar">
-      <div class="logo-text">
-        <div class="logo">
-          <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
-        </div>
-        <div class="text">CINEMA</div>
-      </div>
-    </div>
-  </div>
-</div>
 
+  <div class="logo-container">
+      <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
+      <h1 class="logo-text">ANIME</h1>
+    </div>
 
   <div class="menu">
-    <a href="#">ANIME</a>
 
         <div class="dropdown">
           <a href="#">GENRES</a>
@@ -61,7 +54,17 @@
         <a href="#">SEASON</a>
         <a href="#">LIBRARY</a>
         <a href="#">COMMING SOON</a>
+
+
+        <div id="search-box">
+          <input type="text" id="search-text" placeholder="Search...">
+          <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
   </div>
+
+
+
       
       <div class="content dark-mode">
           <div class="content-change">
