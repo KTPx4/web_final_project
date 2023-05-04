@@ -1,8 +1,11 @@
-.logo img {
-  height: 100px;
-  width: 100px;
-  margin-top: 0px;
-  margin-left: -20px;
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 100px; /* adjust the height of the logo */
+  margin-right: 10px; /* adjust the spacing between logo and text */
 }
 
 .top-10 {
