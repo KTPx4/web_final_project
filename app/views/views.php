@@ -19,49 +19,60 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
+    <script src="public/js/account/script.js"></script>
   </head>
   <body>
 
+  <div class="main-container">
   <div class="logo-container">
-      <a href="#"><img src='<?=$root_img?>logo/Logo.png' alt="Logo"></a>
-      <h1 class="logo-text">ANIME</h1>
-    </div>
+    <a href="#"><img src="<?=$root_img?>logo/Logo.png" alt="Logo"></a>
+    <h1 class="logo-text">ANIME</h1>
+  </div>
 
   <div class="menu">
-
-        <div class="dropdown">
-          <a href="#">GENRES</a>
-          <div class="dropdown-content">
-          <a href="#">Detective</a>
-          <a href="#">Adventure</a>
-          <a href="#">Action Anime</a>
-          <a href="#">Romantic Comedy</a>
-          <a href="#">Science Fiction</a>
-        </div>
+    <div class="dropdown">
+      <a href="#">GENRES</a>
+      <div class="dropdown-content">
+        <a href="#">Detective</a>
+        <a href="#">Adventure</a>
+        <a href="#">Action Anime</a>
+        <a href="#">Romantic Comedy</a>
+        <a href="#">Science Fiction</a>
       </div>
+    </div>
 
-        <div class="dropdown">
-        <a href="#">TOP ANIME</a>
-        <div class="dropdown-content">
-          <a href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a>
-          <a href="#">One Piece - Đảo Hải Tặc (1999)</a>
-          <a href="#">Naruto - Cửu Vĩ Hồ (2002)</a>
-          <a href="#">Conan Movie 25 - Nàng Dâu Halloween (2022)</a>
-          <a href="#">Pocket Monsters - Pokemon (1997)</a>
-        </div>
+    <div class="dropdown">
+      <a href="#">TOP ANIME</a>
+      <div class="dropdown-content">
+        <a href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a>
+        <a href="#">One Piece - Đảo Hải Tặc (1999)</a>
+        <a href="#">Naruto - Cửu Vĩ Hồ (2002)</a>
+        <a href="#">Conan Movie 25 - Nàng Dâu Halloween (2022)</a>
+        <a href="#">Pocket Monsters - Pokemon (1997)</a>
       </div>
+    </div>
 
-        <a href="#">SEASON</a>
-        <a href="#">LIBRARY</a>
-        <a href="#">COMMING SOON</a>
+    <a href="#">SEASON</a>
+    <a href="#">LIBRARY</a>
+    <a href="#">COMMING SOON</a>
 
+    <div id="search-box">
+      <input type="text" id="search-text" placeholder="Search..." required>
+      <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
 
-        <div id="search-box">
-          <input type="text" id="search-text" placeholder="Search...">
-          <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+    <div class="login-register">
+      <button class="login-btn">LOG IN</button>
+      <button class="register-btn">REGISTER</button>
+    </div>
+
+    <div id="wrapper">
+      <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+    </div>
 
   </div>
+</div>
+
 
 
 
