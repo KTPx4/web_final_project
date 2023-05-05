@@ -30,3 +30,11 @@ loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.remove("active");
 });
+
+
+
+var checkbox_toggle = document.getElementById('light-dark');
+checkbox_toggle.addEventListener('change', function() {
+  // Add class Dark for body
+  document.body.classList.toggle('dark');
+});

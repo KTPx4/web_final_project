@@ -17,11 +17,9 @@ padding: 10px;
 border: 2px solid black;
 border-radius: 26px;
 }
-/* div.content{
-color: rgb(9, 248, 49);
-} */
+
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 16px;
 line-height: 1.5;
 color: #333;
@@ -96,21 +94,20 @@ flex: 1;
 }
 
 .logo-text {
-margin-top: 15px;
+margin-top: 25px;
 margin-left: 0px;
 font-size: 50px;
-color: skyblue;
+color: #46E1FF;
 }
 
 /* menu */
 .menu {
-flex: 2;
-display: flex;
-justify-content: 50px;
-align-items: center;
-font-weight: bold;
-margin-top: -93px;
-margin-left: 350px;
+  flex: 2;
+  display: flex;
+  justify-content: 50px;
+  align-items: center;
+  font-weight: bold;
+  margin-top: -93px;
 }
 
 .menu a {
@@ -141,41 +138,32 @@ transform: scaleX(1);
 }
 
 /* dropdown */
-.dropdown {
-position: relative;
-display: inline-block;
+.menu a {
+  left: 350px;
 }
 
 .dropdown-content {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-background-color: black;
-min-width: 200px;
-padding: 10px 0;
-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-z-index: 1;
+  display: none;
+  position: fixed;
 }
 
 .dropdown:hover .dropdown-content {
-display: block;
+  display: block;
 }
 
 a:hover {
-color: orange;
+  color: orange;
 }
 
 .dropdown-content a {
-color: white;
-text-decoration: none;
-font-size: 16px;
-padding: 10px 20px;
-display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
 }
 
 .dropdown-content a:hover {
-color: #FA8072;
+color: tomato;
 }
 
 /* toggle */
@@ -197,10 +185,10 @@ display: none;
 
 /* Search */
 #search-box {
-margin-left: 500px;
+margin-left: 450px;
 position: relative;
 margin-top: 0px;
-background: #fff;
+background-color: grey;
 border-radius: 30px;
 }
 /* step 1 */
@@ -212,7 +200,9 @@ font-size: 18px;
 border-radius: 30px 0 0 30px; /* làm tròn phía trái của ô input */
 width: 0; /* set initial width = 0 */
 padding: 10px;
-transition: all 0.25s ease-in-out;
+transition: all 0.15s ease-in-out;
+background-color: grey;
+
 }
 /* step 3 */
 #search-box:hover #search-text, #search-box #search-text:valid {
@@ -223,12 +213,97 @@ padding: 10px 0px 10px 15px;
 }
 /* step 2 */
 #search-box #search-btn {
-background-color: #fff;
+background-color: grey;
 border: none;
 padding: 15px;
 cursor: pointer;
 border-radius: 0 30px 30px 0; /* làm tròn phía phải của nút */
 font-size: 18px;
+}
+
+#search-btn i {
+  color: white;
+}
+
+/* Light-Dark switch */
+:root {
+  --transition-effect: 0.25s cubic-bezier(.25, -0.59, .82, 1.66)
+}
+body.dark {
+  background: white;
+  transition: var(--transition-effect);
+}
+#wrapper {
+  margin-top: 8px;
+  margin-left: 100px;
+}
+/* Create and set properties for the first circle */
+.switch-toggle {
+  width: 90px;
+  height: 50px;
+  appearance: none; /* Disable default display of checkbox */
+  background: #83d8ff;
+  border-radius: 26px;
+  position: relative; /* parent */
+  cursor: pointer;
+
+  box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 1);
+  transition: var(--transition-effect);
+}
+/* Create and set properties for the second circle */
+.switch-toggle::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute; /* child */
+  border-radius: 50%;
+  background: #efe2bf;
+  box-shadow: inset 0px 0px 6px rgba(255, 255, 255, 1);
+  /* set properties for suitable with first circle */
+  
+  top: 3px;
+  left: 3px;
+
+  transition: var(--transition-effect);
+}
+/* Handle the button click event */
+.switch-toggle:checked {
+  background: #749dd6;
+}
+.switch-toggle:checked::before {
+  left: 40px;
+}
+
+/* Button Log in and Register */
+.login-register {
+  display: flex;
+  margin-left: 100px;
+}
+
+.login-btn, .register-btn {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: 2px solid orangered;
+  border-radius: 26px;
+  font-size: 16px;
+  color: orangered;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.register-btn {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
+  color: #fff;
+  background-color: orangered;
+  cursor: pointer;
+}
+
+.login-btn:hover, .register-btn:hover {
+  background-color: none;
 }
 
 
