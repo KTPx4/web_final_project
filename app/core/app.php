@@ -1,8 +1,8 @@
 ﻿<?php 
     class App{
         protected $controller = "NotFound";
-        protected $page = 'home.html';
-
+        protected $page = 'home.php';
+       
         function __construct()
         {
             $URL = $this->URL();
@@ -18,10 +18,10 @@
 
                     if(isset($URL[1]))
                     {
-                        if(file_exists("./app/views/pages/".$URL[1].".html"))
+                        if(file_exists("./app/views/pages/".$URL[1].".php"))
                         {
                           
-                            $nameFile =  $URL[1].".html";
+                            $nameFile =  $URL[1].".php";
                             $this->page =  $nameFile;
                         }
                         else
@@ -35,14 +35,14 @@
                 else
                 {
                     $this->controller = "NotFound";
-                    $this->page = 'home.html';
+                    $this->page = 'home.php';
                 }
 
             } 
             else
             {
                 $this->controller = "Home";
-                $this->page = 'home.html';
+                $this->page = 'home.php';
             }
             
             // print_r($this->page);
@@ -62,14 +62,14 @@
         {
             if(isset($_GET["url"]))
             {
-
-
+               
+                // print_r($_GET["url"]);
                 return explode("/", filter_var(trim($url = $_GET["url"], "/")));
             }
             else{
                 return array();
             }
-           // echo $_GET["url"];
+          
         }
     }
 ?>

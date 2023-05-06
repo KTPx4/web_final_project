@@ -1,6 +1,8 @@
 div.notfound{
   color: red;
 }
+
+
 div.content{
   background-color: rgb(122, 46, 221);
   margin: 50px auto;
@@ -243,6 +245,7 @@ body.dark {
 .login-btn:hover, .register-btn:hover {
   background-color: none;
 }
+
 
 
 /* CSS for page Not Found */

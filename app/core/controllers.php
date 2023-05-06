@@ -20,7 +20,9 @@ class controllers{
         $title = $arr_page[0]; // title of page is firt char
 
         $pathPage = "./app/views/pages/" .$page ;
-
+        
+        $pathCss =  $arr_page[0] . ".css"; // path css
+        
         require_once "./app/views/" . $view . ".php";
 
     }
