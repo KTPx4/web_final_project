@@ -1,3 +1,4 @@
+
 // const formOpenBtn = document.querySelector("#form-open"),
 //   home = document.querySelector(".home"),
 //   formContainer = document.querySelector(".form_container"),
@@ -61,6 +62,7 @@ $(document).ready(function() {
       $('.body').css('background-color', 'white');
       $('.label').css('color', 'black');
       $('.content-changes').css('border-right', '1px solid rgb(0, 0, 0)');
+
     } else {
       $("#img1").attr("src", "../public/img/logo/brightness1.png");
       // $("#img1").css("background-color", "rgba(94, 13, 110, 0.986)");
@@ -79,6 +81,7 @@ $(document).ready(function() {
 });
 
 
+
 // const toggle = document.getElementById('toggleDark');
 // const body = document.querySelector('body');
 
@@ -92,3 +95,4 @@ $(document).ready(function() {
 //   interval: 2000,
 //   wrap: true
 // })
+
