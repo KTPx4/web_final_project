@@ -73,156 +73,94 @@ p {
 }
 
 #header {
-background-color: black;;
+background-color: black;
 }
 
 /* navbar */
 .navbar {
-color: #333;
 height: 80px;
-display: flex;
-justify-content: space-between;
-align-items: center;
 margin-top: -10px;
-padding: 20px 50px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* logo */
 .logo {
-flex: 1;
+  flex: 1;
 }
 
 .logo-text {
-margin-top: 25px;
-margin-left: 0px;
-font-size: 50px;
-color: #46E1FF;
+  margin-top: 20px;
+  margin-left: -10px;
+  font-size: 50px;
+  font-family: 'Calibri';
+  font-weight: bold;
+  color: #46E1FF;
 }
 
 /* menu */
-.menu {
-  flex: 2;
-  display: flex;
-  justify-content: 50px;
-  align-items: center;
+.nav-link.dropdown-toggle {
+  color: white;
   font-weight: bold;
-  margin-top: -93px;
+  font-family: 'Calibri';
+  margin-top: 15px;
+  left: 35px;
 }
 
-.menu a {
-text-decoration: none;
-font-size: 18px;
-padding: 10px 0;
-margin: 0 20px;
-position: relative;
-color: white;
-}
-
-.menu a:before {
-content: "";
-position: absolute;
-width: 100%;
-height: 2px;
-bottom: 0;
-left: 0;
-background-color: #333;
-visibility: hidden;
-transform: scaleX(0);
-transition: all 0.3s ease-in-out 0s;
-}
-
-.menu a:hover:before {
-visibility: visible;
-transform: scaleX(1);
-}
-
-/* dropdown */
-.menu a {
-  left: 350px;
-}
-
-.dropdown-content {
-  display: none;
-  position: fixed;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-a:hover {
+.nav-link.dropdown-toggle:hover {
   color: orange;
 }
 
-.dropdown-content a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-}
-
-.dropdown-content a:hover {
-color: tomato;
-}
-
-/* toggle */
-.toggle {
-display: none;
-}
-
-.toggle span {
-width: 30px;
-height: 3px;
-margin: 5px 0;
-}
-
 @media only screen and (max-width: 768px) {
-.menu {
-display: none;
-}
-}
-
-/* Search */
-#search-box {
-margin-left: 450px;
-position: relative;
-margin-top: 0px;
-background-color: grey;
-border-radius: 30px;
-}
-/* step 1 */
-#search-box #search-text {
-border: none;
-outline: none;
-padding: 10px 15px;
-font-size: 18px;
-border-radius: 30px 0 0 30px; /* làm tròn phía trái của ô input */
-width: 0; /* set initial width = 0 */
-padding: 10px;
-transition: all 0.15s ease-in-out;
-background-color: grey;
-
-}
-/* step 3 */
-#search-box:hover #search-text, #search-box #search-text:valid {
-/* Check if there is any text or input data on the search bar. 
-If there is, the search bar should not close (hover) back */
-width: 300px;
-padding: 10px 0px 10px 15px;
-}
-/* step 2 */
-#search-box #search-btn {
-background-color: grey;
-border: none;
-padding: 15px;
-cursor: pointer;
-border-radius: 0 30px 30px 0; /* làm tròn phía phải của nút */
-font-size: 18px;
+  .menu {
+    display: none;
+  }
 }
 
-#search-btn i {
+/*Search */
+
+:root {
+  --search_background_color: white; /* màu sáng */
+  --search_focus_background_color: #000; /* màu đen khi hover */
+}
+
+.v1_focus_V1FN7 {
+  background: var(--search_focus_background_color);
+}
+
+.v1_root_deaVh {
+  transition: width .3s,background-color .3s;
+  background: var(--search_background_color);
+  max-width: 420px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 9999px;
+  left: 150px;
+  margin-top: 10px;
+}
+
+.v1_root_deaVh:hover {
+  --search_background_color: #000;
+}
+
+.search-bar_input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: transparent;
   color: white;
+  width: 100%;
+}
+
+.btn-icon {
+  border: none;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+}
+
+.btn-icon i {
+  font-size: 20px;
+  color: orangered;
 }
 
 /* Light-Dark switch */

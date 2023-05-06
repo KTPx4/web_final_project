@@ -29,55 +29,70 @@
   <body>
 
       <!-- menu bar - mo phat -->
-      <div class="main-container">
-        <div class="logo-container">
-          <a href="#"><img src="<?=$root_img?>logo/Logo.png" alt="Logo"></a>
-          <h1 class="logo-text">ANIME</h1>
-        </div>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#"><img src="" alt="">logo</a> -->
+          <div class="logo-container">
+            <a href="#"><img src="<?=$root_img?>logo/Logo.png" alt="Logo"></a>
+            <h1 class="logo-text">ANIME</h1>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">GENRES</a>
+                <ul class="dropdown-menu dropdown-content">
+                  <li><a class="dropdown-item" href="#">Detective</a></li>
+                  <li><a class="dropdown-item" href="#">Adventure</a></li>
+                  <li><a class="dropdown-item" href="#">Action Anime</a></li>
+                  <li><a class="dropdown-item" href="#">Romantic Comedy</a></li>
+                  <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+                </ul>
+              </li>  
 
-        <div class="menu">
-          <div class="dropdown">
-            <a href="#">GENRES</a>
-            <div class="dropdown-content">
-              <a href="#">Detective</a>
-              <a href="#">Adventure</a>
-              <a href="#">Action Anime</a>
-              <a href="#">Romantic Comedy</a>
-              <a href="#">Science Fiction</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">TOP ANIME</a>
+                <ul class="dropdown-menu dropdown-content">
+                  <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                </ul>
+              </li>  
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SEASON</a>
+                <ul class="dropdown-menu dropdown-content">
+                  <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                </ul>
+              </li>  
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">COMMING SOON</a>
+                <ul class="dropdown-menu dropdown-content">
+                  <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </div>
+
+          <!--SEARCH-->
+          <!--SEARCH-->
+          <div class="col-lg-3">
+            <div id="searchBar" class="v1_root_deaVh v1_focus_V1FN7">
+              <input type="text" value placeholder="Film name, Anime, Comic, Cast..." class="v1_input_BkI8D search-bar_input">
             </div>
           </div>
 
-          <div class="dropdown">
-            <a href="#">TOP ANIME</a>
-            <div class="dropdown-content">
-              <a href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a>
-              <a href="#">One Piece - Đảo Hải Tặc (1999)</a>
-              <a href="#">Naruto - Cửu Vĩ Hồ (2002)</a>
-              <a href="#">Conan Movie 25 - Nàng Dâu Halloween (2022)</a>
-              <a href="#">Pocket Monsters - Pokemon (1997)</a>
-            </div>
-          </div>
-
-          <a href="#">SEASON</a>
-          <a href="#">LIBRARY</a>
-          <a href="#">COMMING SOON</a>
-
-          <div id="search-box">
-            <input type="text" id="search-text" placeholder="Search..." required>
-            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
-
-          <div class="login-register">
+          <!--LOGIN AND REGISTER-->
+          <div class="login-register w-50">
             <button class="login-btn">LOG IN</button>
             <button class="register-btn">REGISTER</button>
           </div>
-
+  
           <div id="wrapper">
             <input type="checkbox" name="" class="switch-toggle" id="light-dark">
           </div>
-
+         
         </div>
-      </div>
+      </nav>
 
       <!-- content -->
       <div class="container-xxl">
