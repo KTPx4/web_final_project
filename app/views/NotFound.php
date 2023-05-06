@@ -3,6 +3,7 @@
   $HOST = "http://".$_SERVER['HTTP_HOST'];
   define('HOST', $HOST);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
