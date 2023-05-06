@@ -6,8 +6,8 @@ const formOpenBtn = document.querySelector("#form-open"),
   loginBtn = document.querySelector("#login"),
   pwShowHide = document.querySelectorAll(".pw_hide");
 
-formOpenBtn.addEventListener("click", () => home.classList.add("show"));
-formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
+/* formOpenBtn.addEventListener("click", () => home.classList.add("show"));
+   formCloseBtn.addEventListener("click", () => home.classList.remove("show")); */
 
 pwShowHide.forEach((icon) => {
   icon.addEventListener("click", () => {
@@ -29,12 +29,4 @@ signupBtn.addEventListener("click", (e) => {
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.remove("active");
-});
-
-
-
-var checkbox_toggle = document.getElementById('light-dark');
-checkbox_toggle.addEventListener('change', function() {
-  // Add class Dark for body
-  document.body.classList.toggle('dark');
 });
