@@ -76,6 +76,42 @@ $(document).ready(function() {
     }
     clicked = !clicked;
   });
+
+
+function myFunction(x) {
+  let imgElements = document.querySelectorAll('.img');
+  let descriptionElements = document.querySelectorAll('.description');
+  
+  if (x.matches) {
+    // thay đổi class của các thẻ div khi kích thước màn hình lớn hơn hoặc bằng 992px
+    imgElements.forEach((element) => {
+      element.classList.remove('col-12');
+      element.classList.add('col-lg-3');
+    });
+    
+    descriptionElements.forEach((element) => {
+      element.classList.remove('d-none');
+    });
+  } else {
+    // thay đổi class của các thẻ div khi kích thước màn hình nhỏ hơn 992px
+    imgElements.forEach((element) => {
+      element.classList.remove('col-lg-3');
+      element.classList.add('col-12');
+    });
+    
+    descriptionElements.forEach((element) => {
+      element.classList.add('d-none');
+    });
+  }
+}
+
+let x = window.matchMedia("(min-width: 992px)");
+myFunction(x)
+x.addListener(myFunction);
+
+
+
+
 });
 
 

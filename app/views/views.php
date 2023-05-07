@@ -99,7 +99,7 @@
 
         <div class="container-fluid">
               <div class="row">
-                  <div class="col-12 col-sm-8 col-xl-10 content-changes">
+                  <div class="col-12 col-sm-9 col-xl-10 content-changes">
                       <div class="content-change">
                 
                           <?php 
@@ -111,7 +111,7 @@
                   
 
                   <!-- top update - not change -->
-                  <div class="col-12 col-sm-4 col-xl-2 ">
+                  <div class="col-12 col-sm-3 col-xl-2 ">
                       <div class="top-update">
                           <div class="label-top-update label"><h3>Top Update</h3></div>
                           <div class="table-top-update">

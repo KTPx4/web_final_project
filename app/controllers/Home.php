@@ -11,8 +11,14 @@
             $model = $this->model("Student"); // function model 
                        
             $Data = $model->Get_values_test(); // This is model
-                              
-          
+            
+
+            // if category not have values, not show page, only show home
+            if(!isset($_POST['category']))
+            {
+                $page = "home.php";
+            }
+            
             $this->view("views", $Data, $page); // function view 
 
            

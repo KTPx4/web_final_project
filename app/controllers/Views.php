@@ -8,12 +8,27 @@
         {
             
             
-            // $model = $this->model("Student"); // function model 
+            $model = $this->model("Student"); // function model 
                        
-            // $Data = $model->Get_values_test(); // This is model
-                              
-          
-            // $this->view("views", $Data, $page); // function view 
+            $Data = $model->Get_values_test(); // This is model
+            
+
+            if(isset($_POST['film']) || isset($_POST['trailer']))
+            {
+                $page = "viewFilm.php";
+            }
+            
+            else if(isset($_POST['details']))
+            {
+                $page = "detailFilm.php";
+
+            }
+            else{
+                $page = "home.php";
+
+            }
+            
+            $this->view("views", $Data, $page); // function view 
 
            
         }
