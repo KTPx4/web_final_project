@@ -81,8 +81,8 @@
                   </ul>
                 </li>  
             </ul>
-            <form  class="d-flex" >
-              <input type="text" value placeholder="Film name, Anime, Comic, Cast..." class="v1_input_BkI8D search-bar_input">
+            <form  class=" form-nvbar" >
+              <input type="text" value placeholder="Film..." class="v1_input_BkI8D search-bar_input"></input>
               <button class="login-btn">LOG IN</button>
               <!-- <i class="bi bi-brightness-high-fill switch-toggle" id="toggleDark"> </i> -->
             </form>
@@ -110,8 +110,7 @@
                           ?>    
                       
                       </div>
-                  </div>
-                  
+                  </div>                 
 
                   <!-- top update - not change -->
                   <div class="col-12 col-sm-3 col-xl-2 ">
@@ -124,23 +123,7 @@
                                     <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
                                     <td class=""><div class="label">description 1</div></td>
                                   </tr>
-                                  <tr class="tr-top-update">              
-                                    <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
-                                    <td>description 1</td>
-                                  </tr>
-                                  <tr class="tr-top-update">              
-                                    <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
-                                    <td>description 1</td>
-                                  </tr>
-                                  <tr class="tr-top-update">              
-                                    <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
-                                    <td>description 1</td>
-                                  </tr>
-                                  <tr class="tr-top-update">              
-                                    <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
-                                    <td>description 1</td>
-                                  </tr>
-
+                                  
                               </tbody>
                                 
                                                 
@@ -152,7 +135,6 @@
         </div>
             
         <!-- top film -->
-
           <div class="top-film">
             <div class="label-top-film label"><h3>TOP FILM</h3></div>
 

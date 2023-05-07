@@ -24,7 +24,7 @@
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-category" src="<?=HOST?>/public/img/picture/test1.jpg" alt=""></img></a></div>
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-category" src="<?=HOST?>/public/img/picture/test1.jpg" alt=""></img></a></div>
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-category" src="<?=HOST?>/public/img/picture/test1.jpg" alt=""></img></a></div>
-                        </div>           
+                      </div>           
                          
               </div>
               <div class="page-number">
@@ -37,4 +37,4 @@
                   </div>
               </div>
             </div>
-          </div>
+</div>

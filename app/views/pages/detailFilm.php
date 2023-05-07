@@ -1,1 +1,0 @@
-<p class="">this is detail Film</p>

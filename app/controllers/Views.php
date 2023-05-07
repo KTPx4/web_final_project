@@ -12,23 +12,18 @@
                        
             $Data = $model->Get_values_test(); // This is model
             
-
-            if(isset($_POST['film']) || isset($_POST['trailer']))
+            $views = 'views';
+            if(isset($_GET['film']) || isset($_GET['type']))
             {
-                $page = "viewFilm.php";
-            }
-            
-            else if(isset($_POST['details']))
-            {
-                $page = "detailFilm.php";
-
+                $page ='viewFilm.php';
             }
             else{
-                $page = "home.php";
-
+               
+                $views = 'notfound';
             }
             
-            $this->view("views", $Data, $page); // function view 
+            
+            $this->view($views, $Data, $page); // function view 
 
            
         }
