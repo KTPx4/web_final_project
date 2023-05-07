@@ -21,7 +21,9 @@
             // }
 
             // will show category or page home
-            if($page != "home.php" && $page != "category.php")
+
+            if($page != "home.php" && $page != "category.php" && $page!="viewDetail.php")
+
             {
                 $this->view("notfound", $Data, $page); // function view 
                 

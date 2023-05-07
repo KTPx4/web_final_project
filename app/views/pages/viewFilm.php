@@ -2,6 +2,7 @@
     <div class="label-views label">
         <h3>Hot Series</h3>
     </div>
+
     <div class="container-fluid" style="width:100%;">
         <div class="row">
             <!-- <p class="col-md-6 name-movie-1">Name: Movie 1</p> -->
@@ -179,11 +180,11 @@
                                 </div>
                             </div>
                         </div>
+
                 </div>
             </div>
         </div>
         
     </div>
-
 
 </div>
