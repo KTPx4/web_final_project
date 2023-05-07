@@ -2,6 +2,252 @@ div.notfound{
   color: red;
 }
 
+
+div.content{
+  background-color: rgb(122, 46, 221);
+  margin: 50px auto;
+  text-align: center;
+  padding: 100px;
+
+  /* color: rgb(9, 248, 49); */
+}
+.num-pages{
+display: flex;
+float: left;
+margin: 10px;
+padding: 10px;
+border: 2px solid black;
+border-radius: 26px;
+}
+
+body {
+font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+color: #333;
+background-color: blueyellow;
+margin: 0;
+}
+
+.container {
+max-width: 600px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+font-size: 36px;
+margin: 0 0 20px;
+color: #333;
+text-align: center;
+text-transform: uppercase;
+}
+
+h2 {
+font-size: 20px;
+text-align: center;
+margin-top: -20px;
+}
+
+p {
+font-size: 20px;
+margin: 0;
+color: #e62a2a;
+text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+.container {
+  padding: 10px;
+  margin: 30px auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 18px;
+}
+}
+
+#header {
+background-color: black;
+}
+
+/* navbar */
+.navbar {
+height: 80px;
+margin-top: -10px;
+}
+
+/* logo */
+.logo {
+  flex: 1;
+}
+
+.logo-text {
+  margin-top: 20px;
+  margin-left: -10px;
+  font-size: 50px;
+  font-family: 'Calibri';
+  font-weight: bold;
+  color: #46E1FF;
+}
+
+/* menu */
+.nav-link.dropdown-toggle {
+  color: white;
+  font-weight: bold;
+  font-family: 'Calibri';
+  margin-top: 15px;
+  left: 35px;
+}
+
+.nav-link.dropdown-toggle:hover {
+  color: orange;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+/*Search */
+
+:root {
+  --search_background_color: white; /* màu sáng */
+  --search_focus_background_color: #000; /* màu đen khi hover */
+}
+
+.v1_focus_V1FN7 {
+  background: var(--search_focus_background_color);
+}
+
+.v1_root_deaVh {
+  transition: width .3s,background-color .3s;
+  background: var(--search_background_color);
+  max-width: 420px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 9999px;
+  left: 150px;
+  margin-top: 10px;
+}
+
+.v1_root_deaVh:hover {
+  --search_background_color: #000;
+}
+
+.search-bar_input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+}
+
+.btn-icon {
+  border: none;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+}
+
+.btn-icon i {
+  font-size: 20px;
+  color: orangered;
+}
+
+/* Light-Dark switch */
+:root {
+  --transition-effect: 0.25s cubic-bezier(.25, -0.59, .82, 1.66)
+}
+body.dark {
+  background: white;
+  transition: var(--transition-effect);
+}
+#wrapper {
+  margin-top: 8px;
+  margin-left: 100px;
+}
+/* Create and set properties for the first circle */
+.switch-toggle {
+  width: 90px;
+  height: 50px;
+  appearance: none; /* Disable default display of checkbox */
+  background: #83d8ff;
+  border-radius: 26px;
+  position: relative; /* parent */
+  cursor: pointer;
+
+  box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 1);
+  transition: var(--transition-effect);
+}
+/* Create and set properties for the second circle */
+.switch-toggle::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute; /* child */
+  border-radius: 50%;
+  background: #efe2bf;
+  box-shadow: inset 0px 0px 6px rgba(255, 255, 255, 1);
+  /* set properties for suitable with first circle */
+  
+  top: 3px;
+  left: 3px;
+
+  transition: var(--transition-effect);
+}
+/* Handle the button click event */
+.switch-toggle:checked {
+  background: #749dd6;
+}
+.switch-toggle:checked::before {
+  left: 40px;
+}
+
+/* Button Log in and Register */
+.login-register {
+  display: flex;
+  margin-left: 100px;
+}
+
+.login-btn, .register-btn {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: 2px solid orangered;
+  border-radius: 26px;
+  font-size: 16px;
+  color: orangered;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.register-btn {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
+  color: #fff;
+  background-color: orangered;
+  cursor: pointer;
+}
+
+.login-btn:hover, .register-btn:hover {
+  background-color: none;
+}
+
+
+
 /* CSS for page Not Found */
 .page_404 {
 padding: 40px 0;

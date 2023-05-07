@@ -35,6 +35,7 @@
 
   </head>
   <body>
+
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="javascript:void(0)">
@@ -56,6 +57,7 @@
                     <li><a class="dropdown-item" href="#">Romantic Comedy</a></li>
                     <li><a class="dropdown-item" href="#">Science Fiction</a></li>
                   </ul>
+
               </li>  
 
               <li class="nav-item dropdown">
@@ -71,6 +73,7 @@
                   <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
                 </ul>
               </li>  
+
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">COMMING SOON</a>
                   <ul class="dropdown-menu dropdown-content">
