@@ -18,22 +18,41 @@
 
                     if(isset($URL[1]))
                     {
-                        if(file_exists("./app/views/pages/".$URL[1].".php"))
+                        $query = explode("?", filter_var(trim($URL[1], "?")));
+                        if(!isset($query))
+                        {
+                            $this->controller = "NotFound"; 
+
+                        }
+                        
+                        $pages = $query[0] ?$query[0]: "";
+                        
+                        $queryString = $query[1] ? $query[1] : "";
+                        
+                        print_r($URL);
+                        // push query to method get 
+                        parse_str($queryString, $_GET);
+                        
+                        
+
+                       
+                        if(file_exists("./app/views/pages/".$pages.".php") && isset($_GET['type']))
                         {
                           
-                            $nameFile =  $URL[1].".php";
+                            $nameFile =  $pages.".php";
                             $this->page =  $nameFile;
+                            // $_GET['type'] =  
                         }
                         else
                         {
-                            $this->controller = "NotFound";
+                            $this->controller = "NotFound"; 
 
                         }
                         unset($URL[1]);
                     }
                 }
                 else
-                {
+                {   
                     $this->controller = "NotFound";
                     $this->page = 'home.php';
                 }
@@ -63,7 +82,7 @@
             if(isset($_GET["url"]))
             {
                
-                // print_r($_GET["url"]);
+                
                 return explode("/", filter_var(trim($url = $_GET["url"], "/")));
             }
             else{

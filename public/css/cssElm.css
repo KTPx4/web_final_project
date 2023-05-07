@@ -1,7 +1,7 @@
+
 div.notfound{
   color: red;
 }
-
 
 div.content{
   background-color: rgb(122, 46, 221);
@@ -78,17 +78,55 @@ p {
 background-color: black;
 }
 
-/* navbar */
-.navbar {
-height: 80px;
-margin-top: -10px;
+/* nvbar - menu*/
+.navbar{
+  height: 100px;
 }
 
-/* logo */
+.navbar-collapse.show {
+  background-color: #2b2b2b;
+  border-radius: 20px;
+}
+
+.navbar-nav.me-auto .nav-item {
+  left: 25px;
+
+
+.navbar-collapse .dropdown-menu {
+  background-color: rgba(43, 43, 43, 0.8); /* Sử dụng giá trị rgba để tạo màu nền trong suốt */
+  border: 1px solid white;
+  transform: translateX(30px);
+}
+
+.navbar-nav.me-auto .nav-item .nav-link:hover {
+  color: orange;
+}
+
+.navbar .dropdown-item {
+  color: white;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: orange; /* Thay đổi màu chữ khi hover */
+}
+
+.dropdown-menu .dropdown-item:hover .dropdown-menu .dropdown-item {
+  color: white; /* Màu chữ ban đầu */
+}
+
+.nav-item.dropdown:hover a.dropdown-toggle {
+  text-decoration: underline;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/*LOGO AND TEXT LOGO*/
 .logo {
   flex: 1;
 }
-
 .logo-text {
   margin-top: 20px;
   margin-left: -10px;
@@ -117,111 +155,23 @@ margin-top: -10px;
   }
 }
 
-/*Search */
-
-:root {
-  --search_background_color: white; /* màu sáng */
-  --search_focus_background_color: #000; /* màu đen khi hover */
-}
-
-.v1_focus_V1FN7 {
-  background: var(--search_focus_background_color);
-}
-
-.v1_root_deaVh {
-  transition: width .3s,background-color .3s;
-  background: var(--search_background_color);
-  max-width: 420px;
-  position: relative;
-  display: flex;
-  width: 100%;
-  border-radius: 9999px;
-  left: 150px;
-  margin-top: 10px;
-}
-
-.v1_root_deaVh:hover {
-  --search_background_color: #000;
-}
-
-.search-bar_input {
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-  font-size: 18px;
+/* Search */
+.v1_input_BkI8D {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: transparent;
-  color: white;
-  width: 100%;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+.v1_input_BkI8D:focus {
+  background-color: #000;
+  color: #fff;
 }
 
-.btn-icon {
-  border: none;
-  cursor: pointer;
-  border-radius: 0 30px 30px 0;
-}
-
-.btn-icon i {
-  font-size: 20px;
-  color: orangered;
-}
-
-/* Light-Dark switch */
-:root {
-  --transition-effect: 0.25s cubic-bezier(.25, -0.59, .82, 1.66)
-}
-body.dark {
-  background: white;
-  transition: var(--transition-effect);
-}
-#wrapper {
-  margin-top: 8px;
-  margin-left: 100px;
-}
-/* Create and set properties for the first circle */
-.switch-toggle {
-  width: 90px;
-  height: 50px;
-  appearance: none; /* Disable default display of checkbox */
-  background: #83d8ff;
-  border-radius: 26px;
-  position: relative; /* parent */
-  cursor: pointer;
-
-  box-shadow: inset 0px 0px 16px rgba(255, 255, 255, 1);
-  transition: var(--transition-effect);
-}
-/* Create and set properties for the second circle */
-.switch-toggle::before {
-  content: "";
-  width: 44px;
-  height: 44px;
-  position: absolute; /* child */
-  border-radius: 50%;
-  background: #efe2bf;
-  box-shadow: inset 0px 0px 6px rgba(255, 255, 255, 1);
-  /* set properties for suitable with first circle */
-  
-  top: 3px;
-  left: 3px;
-
-  transition: var(--transition-effect);
-}
-/* Handle the button click event */
-.switch-toggle:checked {
-  background: #749dd6;
-}
-.switch-toggle:checked::before {
-  left: 40px;
-}
-
-/* Button Log in and Register */
-.login-register {
-  display: flex;
-  margin-left: 100px;
-}
-
-.login-btn, .register-btn {
-  margin-left: 10px;
+/* Login */
+.login-btn {
   padding: 8px 12px;
   border: 2px solid orangered;
   border-radius: 26px;
@@ -231,55 +181,78 @@ body.dark {
   cursor: pointer;
 }
 
-.register-btn {
-  margin-left: 10px;
-  padding: 8px 12px;
+/* Light-Dark Screen */
+.dark-mode{
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+
   border: none;
-  border-radius: 26px;
-  font-size: 16px;
-  color: #fff;
-  background-color: orangered;
-  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgba(94, 13, 110, 0.986);
 }
-
-.login-btn:hover, .register-btn:hover {
-  background-color: none;
+.dark-mode img{
+  width: 35px;
+  margin: 0 5px;
+  height: auto;
+  object-fit: contain;
 }
-
-
+div.img-2, div.img-1{
+  padding: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+/* selected */
+div.img-2{ 
+  border-radius: 0 20px 20px 0;
+  background-color: rgba(172, 30, 201, 0.986);
+  
+}
+div.img-1{ 
+  background-color: rgba(172, 30, 201, 0.986);
+  border-radius: 20px 0px 0px 20px;
+}
 
 /* CSS for page Not Found */
 .page_404 {
-padding: 40px 0;
-background: #fff;
-font-family: "Arvo", serif;
-}
-
-.page_404 img {
-width: 100%;
-}
-
-.four_zero_four_bg {
-background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-height: 400px;
-background-position: center;
-}
-
-.four_zero_four_bg h1 {
-font-size: 80px;
-}
-
-.four_zero_four_bg h3 {
-font-size: 80px;
-}
-
-.link_404 {
-color: #fff !important;
-padding: 10px 20px;
-background: #39ac31;
-margin: 20px 0;
-display: inline-block;
-}
-.contant_box_404 {
-margin-top: -50px;
-}
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+  }
+  
+  .page_404 img {
+  width: 100%;
+  }
+  
+  .four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  }
+  
+  .four_zero_four_bg h1 {
+  font-size: 80px;
+  }
+  
+  .four_zero_four_bg h3 {
+  font-size: 80px;
+  }
+  
+  .link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  }
+  .contant_box_404 {
+  margin-top: -50px;
+  }

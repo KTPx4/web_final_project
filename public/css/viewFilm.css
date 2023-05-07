@@ -1,0 +1,145 @@
+div.views{
+    margin: 20px;
+}
+div.views div.container-fluid{
+    background-color: rgba(233, 224, 224, 0.913);
+    margin: 10px 0px 10px 0px;
+    width: 72%;
+    /* height: 500px; */
+    /* margin-top: 20px; */
+  }
+  div.view-film{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .name-movie {
+    color: black;
+    /* margin-left: -405px; */
+    font-family: Calibri;
+    font-weight: 1000;
+  }
+  
+  .embed-responsive-item {
+    /* width: 550px; */
+    width: 100%;
+    height: 250px;
+    /* height: 300px; */
+  }
+  
+  @media (min-width: 992px) {
+    /* Màn hình lg và xl */
+    .embed-responsive-16by9 {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+         /* Tỷ lệ 16:9 */
+    }
+    
+    .embed-responsive-16by9 iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+div.container {
+    /* height: 420px; */
+}
+/*btn watch-film and trailer*/
+.btn-watch-film,
+    .btn-watch-trailer {
+        align-self: stretch;
+        flex: 1;
+        position: relative;
+        line-height: 28px;
+        border-radius: 30px;
+
+        padding: 8px 12px;
+        /* width: 10px; */
+}
+
+.btn-watch-film {
+    background-color: #FF31C5;
+    color: white;
+    font-family: Calibri;
+    font-weight: 500;
+}
+
+.btn-watch-trailer {
+    background-color: #75f491;
+    color: white;
+    font-family: Calibri;
+    font-weight: 500;
+}
+
+div.btn-views{
+    text-align: center;
+    margin: 15px 0 /* width: 100px !important; */
+
+}
+div.epi{
+    background-color: #CECECE;
+}
+div.epiii{
+    margin: 5px 5px;
+    padding: 0px;
+}
+button.btn-eipi{
+    border: 0px none;
+    background-color: rgba(89, 95, 116, 0.9);
+    color: #96eeff;
+    border-radius: 5px;
+    width: 50px;
+    margin: 5px;
+}
+
+/* cmt */
+div.con-cmt{
+    background-color: transparent !important;
+    border:  0xp none !important;
+}
+div.comment-film{
+    background-color: white;
+    margin: 10px;
+}
+div.my-cmt{
+    display: flex;
+    border-bottom: 1px solid black;
+
+}
+div.me{
+    display: flex;
+    margin: 10px ;
+
+}
+
+div.avt{
+    width: 20%;
+}
+input.input-cmt 
+{
+    float: left;
+    width: 70%;
+    color: black;
+    border-radius: 50px;
+}
+input.push{
+    width: 10%;
+}
+div.cmt{
+    margin: 40px 10px;
+    display: flex;
+}
+
+.description-film{
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    display: flex;
+    padding: 0;
+}
+.descr{
+    margin: 10px;
+}
+img.img-film-1{
+    width: 150px;
+}

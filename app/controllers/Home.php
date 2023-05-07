@@ -14,12 +14,21 @@
             
 
             // if category not have values, not show page, only show home
-            if(!isset($_POST['category']))
+          
+            // if(!isset($_POST['category']))
+            // {
+            //     $page = "home.php";
+            // }
+
+            // will show category or page home
+            if($page != "home.php" && $page != "category.php")
             {
-                $page = "home.php";
+                $this->view("notfound", $Data, $page); // function view 
+                
+            }else{
+                $this->view("views", $Data, $page); // function view 
+
             }
-            
-            $this->view("views", $Data, $page); // function view 
 
            
         }
