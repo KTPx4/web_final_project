@@ -63,26 +63,70 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">TOP ANIME</a>
                 <ul class="dropdown-menu dropdown-content">
-                  <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                  <li><a class="dropdown-item" href="#">By Season</a></li>
+                  <li><a class="dropdown-item" href="#">By Day</a></li>
+                  <li><a class="dropdown-item" href="#">By Month</a></li>
+                  <li><a class="dropdown-item" href="#">By Year</a></li>
                 </ul>
               </li>  
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SEASON</a>
-                <ul class="dropdown-menu dropdown-content">
-                  <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                <ul class="dropdown-menu dropdown-content multi-column">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <h6 class="dropdown-header">2023</h6>
+                      <a class="dropdown-item" href="#">Spring</a>
+                      <a class="dropdown-item" href="#">Summer</a>
+                      <a class="dropdown-item" href="#">Autumn</a>
+                      <a class="dropdown-item" href="#">Winter</a>
+                    </div>
+                    <div class="col-md-5">
+                      <h6 class="dropdown-header">2022</h6>
+                      <a class="dropdown-item" href="#">Spring</a>
+                      <a class="dropdown-item" href="#">Summer</a>
+                      <a class="dropdown-item" href="#">Autumn</a>
+                      <a class="dropdown-item" href="#">Winter</a>
+                    </div>
+                    <div class="col-md-5">
+                      <h6 class="dropdown-header">2021</h6>
+                      <a class="dropdown-item" href="#">Spring</a>
+                      <a class="dropdown-item" href="#">Summer</a>
+                      <a class="dropdown-item" href="#">Autumn</a>
+                      <a class="dropdown-item" href="#">Winter</a>
+                    </div>
+                    <div class="col-md-5">
+                      <h6 class="dropdown-header">2020 </h6>
+                      <a class="dropdown-item" href="#">Spring</a>
+                      <a class="dropdown-item" href="#">Summer</a>
+                      <a class="dropdown-item" href="#">Autumn</a>
+                      <a class="dropdown-item" href="#">Winter</a>
+                    </div>
+                  </div>
                 </ul>
               </li>  
 
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">COMMING SOON</a>
                   <ul class="dropdown-menu dropdown-content">
-                    <li><a class="dropdown-item" href="#">Odd TaxI - Chuyến Taxi bất ổn (2021)</a></li>
+                    <li><a class="dropdown-item" href="#">Meitantei Conan: Haibara Ai Monogatari</a></li>
+                    <li><a class="dropdown-item" href="#">Aikatsu! 10th Story: Mirai e no Starway</a></li>
+                    <li><a class="dropdown-item" href="#">Sōkyū no Fafner: Behind the Line</a></li>
+                    <li><a class="dropdown-item" href="#">SSSS.Gridman Gekijō Sōshūhen</a></li>
+                    <li><a class="dropdown-item" href="#">Rakudai Majo: Fuuka to Yami no Majo</a></li>
                   </ul>
-                </li>  
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">LIBRARY</a>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SCREENING SCHEDULE</a>
             </ul>
+
             <form  class=" form-nvbar" >
               <input type="text" value placeholder="Film..." class="v1_input_BkI8D search-bar_input"></input>
+
               <button class="login-btn">LOG IN</button>
               <!-- <i class="bi bi-brightness-high-fill switch-toggle" id="toggleDark"> </i> -->
             </form>
@@ -178,7 +222,7 @@
       <footer class="container-fluid text-center">
           <div class="row" style="width: 100%;">
               <div class="col-12 col-md-6">
-                  <div class="description">
+                  <div class="foot-description">
                     <div class="a d-grid" >
                       <p style="text-align: center; font-size: 25px;" >Web Programming and Applications</p>
                       <p><i class="fa-solid fa-copyright" style="color: #000000;"></i></i>Copyright belongs to Group 18(N2_HK2_2223_503073)</p>

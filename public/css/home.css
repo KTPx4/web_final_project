@@ -149,10 +149,6 @@ img.img-top-update
 
 }
 
-
-
-
-
 /* topic */
 div.topic{
   display: flex;
@@ -205,8 +201,6 @@ div.topic div.text{
   width:  100%;
   padding:0;
   margin-left: 0;
-
-
 }
 div.text div.description{
   margin-left: 50px;
@@ -336,7 +330,7 @@ footer{
   justify-content: center;
 }
 
-div.description{
+div.foot-description{
   margin-right: 5%;
   
 }

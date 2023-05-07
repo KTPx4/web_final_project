@@ -1,5 +1,5 @@
 <?php 
-    // require_once __DIR__ . "./app/core/controllers.php";
+    // require_once _DIR_ . "./app/core/controllers.php";
     // require_once "./app/core/controllers.php";
     class Views extends controllers{
         // default method call in class home 

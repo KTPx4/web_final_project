@@ -17,8 +17,10 @@
 
                     if(isset($URL[1])) // if have page -follow to: http://localhost/controller/pages?query=
                     {
+
                         $query = explode("?", filter_var(trim($URL[1], "?"))); // get query after pages
                         if(!isset($query)) // if call pages without query for type or film -> not found
+
                         {
                             $this->controller = "NotFound"; 
 
@@ -35,6 +37,7 @@
                         
                         // print_r($URL);
                        
+
                         // push query to method get 
                         parse_str($queryString, $_GET);
                         
@@ -42,6 +45,7 @@
 
                        // if exists page and method get
                         if(file_exists("./app/views/pages/".$pages.".php") && (isset($_GET['type']) || isset($_GET['film'])))
+
                         {
                           
                             $nameFile =  $pages.".php";
