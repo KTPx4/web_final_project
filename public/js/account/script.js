@@ -47,16 +47,43 @@
 //     }
 //   });
 // });
+function getCookie(name) {
+  var cookieArr = document.cookie.split(";");
+  for (var i = 0; i < cookieArr.length; i++) {
+      var cookiePair = cookieArr[i].split("=");
+      if (name === cookiePair[0].trim()) { // if name = name cokie store
+          return decodeURIComponent(cookiePair[1]); // return value in cokie
+      }
+  }
+  return null;
+}
 $(document).ready(function() {
   var clicked = false;
+
+  var darkMode = getCookie("darkMode");
+    if (darkMode === "true") {
+        //Thiết lập lại trạng thái của giao diện ở chế độ light
+        $("#img1").attr("src", "../public/img/logo/brightness2.png");
+        $("#img1").css("border-radius", "20px 0px 0px 20px");
+
+        $("#img2").attr("src", "../public/img/logo/moon1.png");
+        $("#img2").css("border-radius", "0 20px 20px 0");
+        $('.body').css('background-color', 'white');
+        $('.label').css('color', 'black');
+        $('.content-changes').css('border-right', '1px solid rgb(0, 0, 0)');
+    }
+
+    $("#dark-mode").click(function() {
+        //...
+    });
+
+  //buton dark-mode click
   $("#dark-mode").click(function() {
     if (!clicked) {
       $("#img1").attr("src", "../public/img/logo/brightness2.png");
-      // $("#img1").css("background-color", "rgba(172, 30, 201, 0.986)");
       $("#img1").css("border-radius", "20px 0px 0px 20px");
 
       $("#img2").attr("src", "../public/img/logo/moon1.png");
-      // $("#img2").css("background-color", "rgba(94, 13, 110, 0.986)");
       $("#img2").css("border-radius", "0 20px 20px 0");
       
       $('.body').css('background-color', 'white');
@@ -65,11 +92,9 @@ $(document).ready(function() {
 
     } else {
       $("#img1").attr("src", "../public/img/logo/brightness1.png");
-      // $("#img1").css("background-color", "rgba(94, 13, 110, 0.986)");
       $("#img1").css("border-radius", "20px 0px 0px 20px");
 
       $("#img2").attr("src", "../public/img/logo/moon2.png");
-      // $("#img2").css("background-color", "rgba(172, 30, 201, 0.986)");
       $("#img2").css("border-radius", "0 20px 20px 0");
 
       $('.body').css('background-color', '#131313');
@@ -77,6 +102,7 @@ $(document).ready(function() {
       $('.content-changes').css('border-right', '1px solid white');
     }
     clicked = !clicked;
+    document.cookie = "darkMode=" + clicked + "; path=/"; // store to cookie
   });
 
 
