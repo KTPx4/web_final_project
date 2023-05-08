@@ -13,6 +13,7 @@
                 if(file_exists("./app/controllers/".$URL[0].".php")) 
                 {
                     $this->controller = $URL[0]; //
+                    // print_r($this->controller);
                     unset($URL[0]); 
 
                     if(isset($URL[1])) // if have page -follow to: http://localhost/controller/pages?query=

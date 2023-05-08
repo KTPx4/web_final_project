@@ -79,6 +79,20 @@ background-color: black;
 }
 
 /* nvbar - menu*/
+form.form-nvbar{
+  display: flex;
+}
+div.input-search{
+  width: 65%;
+  margin: 5px 5%;
+}
+div.input-search input{
+  width: 100% !important;
+}
+div.btn-login{
+  width: 25%;
+  text-align: left;
+}
 .navbar{
   height: 100px;
 }
@@ -89,13 +103,30 @@ background-color: black;
 }
 
 .navbar-nav.me-auto .nav-item {
-  left: 25px;
-
-
+  /* left: 25px; */
+  /* margin: 0 5%; */
+}
+/* set margin when screen < 920 */
+@media (max-width: 992px) {
+  .navbar-nav.me-auto .nav-item {
+    margin: 0 5%;
+  }
+}
+/* margin 0 when screen > 920 */
+@media (min-width: 992px) {
+  .navbar-nav.me-auto .nav-item {
+    margin: 0;
+  }
+}
 .navbar-collapse .dropdown-menu {
   background-color: rgba(43, 43, 43, 0.8); /* Sử dụng giá trị rgba để tạo màu nền trong suốt */
+ 
   border: 1px solid white;
-  transform: translateX(30px);
+  /* width: 90%;   */
+  /* transform: translateX(30px); */
+}
+.navbar-collapse .dropdown-menu form.formnv-bar{
+    /* float: left; */
 }
 
 .navbar-nav.me-auto .nav-item .nav-link:hover {
@@ -104,6 +135,7 @@ background-color: black;
 
 .navbar .dropdown-item {
   color: white;
+  margin: 5px;
 }
 
 .dropdown-menu .dropdown-item:hover {
@@ -142,7 +174,7 @@ background-color: black;
   font-weight: bold;
   font-family: 'Calibri';
   margin-top: 15px;
-  left: 35px;
+  /* left: 35px; */
 }
 
 .nav-link.dropdown-toggle:hover {
@@ -156,6 +188,7 @@ background-color: black;
 }
 
 /* Search */
+
 .v1_input_BkI8D {
   display: inline-block;
   padding: 5px;
@@ -167,7 +200,7 @@ background-color: black;
 }
 .v1_input_BkI8D:focus {
   background-color: #000;
-  color: #fff;
+  color: #0987d6;
 }
 
 /* Login */
