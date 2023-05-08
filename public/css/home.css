@@ -10,22 +10,38 @@ html, body div.body{
 
     /* min-width: 660px; */
     margin: 0 auto;
-    background-color: #131313;
+ 
+    /* background-color: #131313; */
+    background-image: url("http://localhost/public/img/logo/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 body a{
   text-decoration: none;
+ 
 }
+body div.body div.content-body{
+  margin-bottom: 30px;
+}
+
 
 div.label{
   padding: 0;
   margin: 10px 0 10px 0px;
+
 }
 
 /* nvbar - menu*/
 .navbar{
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
+
 .navbar-brand {
   text-align: center;
 }
@@ -52,7 +68,7 @@ div.label{
 
   border: none;
   border-radius: 20px;
-  background-color: rgba(94, 13, 110, 0.986);
+  background-color: grey;
 }
 .dark-mode img{
   width: 20px;
@@ -82,6 +98,10 @@ form.form-nvbar{
   border-radius: 15px;
   height: 40px;
 }
+/* .navbar-collapse.show {
+  position: absolute;
+  top: 0;
+} */
 button.login-btn{
   height: 45px;
   width: 120px;
@@ -89,25 +109,26 @@ button.login-btn{
 button.dark-mode{
   height: 30px;
   width: 80px;
-
+  background-color: grey;
 }
 /* selected */
 div.img-2{ 
   border-radius: 0 20px 20px 0;
-  background-color: rgba(172, 30, 201, 0.986);
+  background-color: grey !important;
   
 }
 div.img-1{ 
-  background-color: rgba(172, 30, 201, 0.986);
+  background-color: grey !important;
   border-radius: 20px 0px 0px 20px;
 
 }
 
 
 /* content change - home */
-div.container-fluid div.content-changes{
-  /* border-right: 1px solid rgba(255, 255, 255, 0.815); */
-  border-radius: 15px;
+div.content-changes{
+  border-right:1px solid rgb(255, 255, 255);
+  border-width: 50%;
+
 }
 div.hot-series{
   margin: 15px 0 20px 0;
@@ -118,11 +139,12 @@ div.hot-series div.container-fluid{
   
 }
 
+
 div.hot-series div.row{
   margin-bottom: 10px;
 }
 div.hot-series div.row div.col-4{
-  margin: 10px 0 10px 0 ;
+  /* margin: 10px 0 10px 0 ; */
 }
 
 
@@ -135,9 +157,13 @@ img.img-top-update
   width: 70px;
 }
 .label-top-update{
-  margin-top: 20px;
+  margin-top: 20px !important;
   text-align: center;
+  margin-bottom: 50px !important;
+ 
 }
+
+
 .table-top-update{
   display: flex;
   justify-content: center;
@@ -148,6 +174,20 @@ img.img-top-update
   border-spacing: 0 10px;
 
 }
+div.card-update{
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+div.card-update div.description-update{
+  width: auto;
+}
+.card-text-descr{
+  color: white;
+}
+
+
+
 
 /* topic */
 div.topic{
@@ -158,7 +198,7 @@ div.topic{
 div.topic div.container-fluid{
   background-color: rgba(112, 135, 138, 0.3);
   border-radius: 30px;
-  margin: 10px 15px 10px 15px;
+  margin: 0px auto;
   width: 72%;
   /* padding: 30px; */
 }
@@ -334,6 +374,13 @@ div.foot-description{
   margin-right: 5%;
   
 }
+div.foot-description div.a{
+  justify-items: left;
+}
+div.foot-description div.a div.text-foot{
+  width: 100%;
+  justify-items: center;
+}
 div.member{
   text-align: center;
   
@@ -355,15 +402,16 @@ div.a{
 
 
 div.hot-series div.container-fluid{
-  background-color:  rgba(157, 153, 153, 0.7);
+  /* background-color:  rgba(157, 153, 153, 0.7); */
   border-radius: 25px;
-  margin: 10px 0px 10px 0px;
-  width: 100%;
+  margin: 5px auto;
+  width: 90%;
   height: 100%;
+  text-align: center;
   
   /* margin-top: 20px; */
 }
 div.hot-series{
-  
+
 }
 

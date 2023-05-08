@@ -1,3 +1,13 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE)
+	{
+		session_start();
+	}
+	
+    
+   
+?>
+
 <div class="views">
     <div class="label-views label">
         <h3>Hot Series</h3>
@@ -7,7 +17,7 @@
         <div class="row">
             <!-- <p class="col-md-6 name-movie-1">Name: Movie 1</p> -->
             <p class="name-movie">Name:Movie</p>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-xl-8 watch">
                 <div class="view-film">
                     <!-- <div class="embed-responsive embed-responsive-16by9"> -->
                     <!-- <div class="ratio ratio-16x9">
@@ -35,7 +45,7 @@
                         <h4 style="color: black;">Episode</h4>
                     </div>
 
-                    <div class="epiii">
+                    <div class="epiii d-none">
                         <div class="container">
                             <div class="row">
                                 <div class="col-2">
@@ -138,46 +148,96 @@
             
             </div>
 
-            <div class="col-12 col-md-4 container con-cmt">
+            <div class="col-12 col-xl-4 container con-cmt">
                 <div class="box-cmt">
 
                     <div class="comment-film">
                             <div class="my-cmt">
                                 <div class="me">
-                                    <div class="avt"><button></button></div>
+                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: red;"></i></p></div>
                                     <div class="input-cmt">
-                                            <input class="input-cmt" type="text">
-                                            <button class="push" placeholder="Your Comment"></button>
+                                            <input class="input-cmt" type="text"/>
+                                            <button onclick="checkSession()" class="push" >Comment</button>
                                     </div>
         
                                 </div>
         
                             </div>
-                            <div class="peo-cmt">
-                                <div class="cmt cmt-1">
-                                    <div class="avt"><button></button></div>
-                                    <div class="input-cmt">
-                                            <input class="input-cmt" type="text">
+                                <div class="peo-cmt">
+                                    
+                                    <div class="cmt cmt-4">
+                                        <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
+                                        <div class="info-cmt">
+                                            <div class="name"><p>name</p></div>
+                                            <div class="text-cmt">
+                                                <div class="text-peo-cmt">
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cmt cmt-4">
+                                        <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
+                                        <div class="info-cmt">
+                                            <div class="name"><p>name</p></div>
+                                            <div class="text-cmt">
+                                                <div class="text-peo-cmt">
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cmt cmt-4">
+                                        <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
+                                        <div class="info-cmt">
+                                            <div class="name"><p>name</p></div>
+                                            <div class="text-cmt">
+                                                <div class="text-peo-cmt">
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cmt cmt-4">
+                                        <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
+                                        <div class="info-cmt">
+                                            <div class="name"><p>name</p></div>
+                                            <div class="text-cmt">
+                                                <div class="text-peo-cmt">
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cmt cmt-4">
+                                        <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
+                                        <div class="info-cmt">
+                                            <div class="name"><p>name</p></div>
+                                            <div class="text-cmt">
+                                                <div class="text-peo-cmt">
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>
+                                                    <p>text cmt</p>                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="cmt cmt-2">
-                                    <div class="avt"><button></button></div>
-                                    <div class="input-cmt">
-                                            <input class="input-cmt" type="text">
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-3">
-                                    <div class="avt"><button></button></div>
-                                    <div class="input-cmt">
-                                            <input class="input-cmt" type="text">
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><button></button></div>
-                                    <div class="input-cmt">
-                                            <input class="input-cmt" type="text">
-                                    </div>
-                                </div>
+                              
+                                
                             </div>
                         </div>
 

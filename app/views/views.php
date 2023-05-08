@@ -2,6 +2,22 @@
   $root_img='http://'.$_SERVER['HTTP_HOST'] . "/public/img/";
   $HOST = "http://".$_SERVER['HTTP_HOST'];
   define('HOST', $HOST);
+  
+  // Bắt đầu session
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+  // Lưu giá trị $_GET['film'] vào session
+  if (isset($_GET['film'])) {
+    $_SESSION['film'] = $_GET['film'];
+  }
+
+  if (isset($_GET['type'])) {
+    $_SESSION['type'] = $_GET['type'];
+  }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -124,10 +140,13 @@
                 <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SCREENING SCHEDULE</a>
             </ul>
 
-            <form  class=" form-nvbar" >
-              <input type="text" value placeholder="Film..." class="v1_input_BkI8D search-bar_input"></input>
-
-              <button class="login-btn">LOG IN</button>
+            <form  class="form-nvbar" action="<?=HOST?>/login" method="POST">
+              <div class="input-search">
+                <input type="text" value placeholder="Film..." class="v1_input_BkI8D search-bar_input"></input>
+              </div>  
+              <div class="bnt-login">
+                <button class="login-btn">LOG IN</button>
+              </div>
               <!-- <i class="bi bi-brightness-high-fill switch-toggle" id="toggleDark"> </i> -->
             </form>
             <button  id="dark-mode" class="dark-mode">
@@ -143,39 +162,53 @@
       </nav>
       
       <div class="body">
-
-        <div class="container-fluid">
-              <div class="row">
-                  <div class="col-12 col-sm-9 col-xl-10 content-changes">
-                      <div class="content-change">
-                
-                          <?php 
-                              require_once($pathPage);
-                          ?>    
-                      
-                      </div>
-                  </div>                 
-
-                  <!-- top update - not change -->
-                  <div class="col-12 col-sm-3 col-xl-2 ">
-                      <div class="top-update">
-                          <div class="label-top-update label"><h3>Top Update</h3></div>
-                          <div class="table-top-update">
-                            <table >
-                              <tbody>
-                                  <tr class="tr-top-update">              
-                                    <td><a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a></td>
-                                    <td class=""><div class="label">description 1</div></td>
-                                  </tr>
+        <div class="content-body">
+          <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-7 col-lg-9 content-changes">
+                        <div class="content-change">
+                  
+                            <?php 
+                                require_once($pathPage);
+                            ?>    
+                        
+                        </div>
+                    </div>                 
+  
+                    <!-- top update - not change -->
+                    <div class="col-12 col-sm-5 col-lg-3 ">
+                        <div class="top-update">
+                            <div class="label-top-update label"><h3>Top Update</h3></div>
+                            <div class="table-top-update">
+                              <table >
+                                <tbody>
+  
+                                    <tr class="tr-top-update">   
+                                      
+                                      <div class="card-update">
+                                          <div class="row">
+                                            <div class="col-4 col-sm-3">
+                                                <img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>      
+                                            </div>
+                                            <div class="col-8 col-sm-9">
+                                              <div class="description-update"><H5 class="card-text-descr">description 1</H5></div>
+                                            </div>
+  
+                                          </div>
+                                        </div>           
+                                      <!-- <td><a href=""></td>
+                                      <td class=""></td> -->
+                                    </tr>
+                                    
+                                </tbody>
                                   
-                              </tbody>
-                                
-                                                
-                            </table>
-                          </div>
-                      </div>
+                                                  
+                              </table>
+                            </div>
+                        </div>
+                    </div>
                   </div>
-                </div>
+            </div>
         </div>
             
         <!-- top film -->
@@ -187,20 +220,20 @@
               <div class="container-fluid">    
                   
                       <div class="row ">
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>               
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>               
                       </div>           
                       <div class="row ">
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>
-                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top film"></img></a></div>               
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
+                          <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>               
                       </div>        
                    
               </div>
@@ -224,7 +257,9 @@
               <div class="col-12 col-md-6">
                   <div class="foot-description">
                     <div class="a d-grid" >
-                      <p style="text-align: center; font-size: 25px;" >Web Programming and Applications</p>
+                      <div class="text-foot">
+                          <p style="text-align: center; font-size: 25px;" >Web Programming and Applications</p>
+                      </div>
                       <p><i class="fa-solid fa-copyright" style="color: #000000;"></i></i>Copyright belongs to Group 18(N2_HK2_2223_503073)</p>
                       <p><i class="fa-solid fa-calendar-days" style="color: #000000;"></i>The execution time is from April 7th to May 7th.</p>
                       <p><i class="fa-regular fa-circle-check" style="color: #000000;"></i>Final Project</p>

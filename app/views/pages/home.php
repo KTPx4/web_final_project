@@ -5,22 +5,44 @@
         
         <div class="row">
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
             <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.jpg" alt="top update" ></img></a>
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+           
+      
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
+            </div>
+            <div class="col-6 col-sm-4 col-xl-2 img">
+                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
            
       
@@ -30,7 +52,7 @@
     </div> 
 </div>
 <div class="topic">
-    <div class="label-hot-topic mt-10 label"><h3>Hot Topic</h3></div>
+    <div class="label-hot-topic mt-10 label" style="width:100%;"><h3>Hot Topic</h3></div>
 
     <div class="container-fluid">
             <div id="topicCarouse" class="carousel slide" data-bs-ride="carousel">

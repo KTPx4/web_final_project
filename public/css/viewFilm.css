@@ -91,15 +91,27 @@ button.btn-eipi{
     width: 50px;
     margin: 5px;
 }
+div.views div.watch{
+    padding-top: 30px;
+}
+
+
 
 /* cmt */
 div.con-cmt{
     background-color: transparent !important;
     border:  0xp none !important;
+    box-shadow: none !important;
+}
+div.box-cmt{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 9px 8px #8a81817d !important;
 }
 div.comment-film{
-    background-color: white;
-    margin: 10px;
+    /* background-color: white; */
+    /* margin: 10px; */
 }
 div.my-cmt{
     display: flex;
@@ -114,6 +126,7 @@ div.me{
 
 div.avt{
     width: 20%;
+    margin: auto;
 }
 input.input-cmt 
 {
@@ -126,7 +139,7 @@ input.push{
     width: 10%;
 }
 div.cmt{
-    margin: 40px 10px;
+    margin: 30px 0px 30px 10px;
     display: flex;
 }
 
@@ -142,4 +155,72 @@ div.cmt{
 }
 img.img-film-1{
     width: 150px;
+}
+
+div.avt p{
+    font-size: 40px;
+}
+div.me{
+    float: left;
+    width: 100%;
+}
+div.me div.input-cmt{
+    padding: 0;
+    width: 100%;
+}
+div.me input{
+    width: 49%;
+    margin: 15px 7px;
+   
+
+}
+div.me .push{
+    background-color: rgba(88, 95, 197, 0.651);
+    text-align: center;
+    margin: 10px 0;
+    border: 0px none;
+    border-radius: 6px;
+    width: 40%;
+    height: 40px;
+    font-size: 15px;
+}
+div.peo-cmt{
+    margin-bottom: 20px;
+}
+div.text-peo-cmt{
+    width: 100%;
+    text-align: left;
+   
+}
+div.text-peo-cmt p{
+    margin-left: 5px;
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+div.peo-cmt .text-cmt{
+    width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 0px none;
+    border-radius: 8px;
+    background-color: #808ea2;
+}
+div.peo-cmt .text-cmt p{
+    width: 95%;
+    margin: 5px !important;
+    width: auto;
+}
+div.peo-cmt div.info-cmt{
+    width: 100%;
+}
+div.peo-cmt div.name p{
+    text-align: left ;
+    margin:  0 0 0 5px;
+}
+.info-cmt div.text-cmt, .text-peo-cmt{
+    width: 100%;
+}
+div.info-cmt{
+    margin-right: 10px;
 }

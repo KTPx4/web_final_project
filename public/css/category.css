@@ -6,7 +6,7 @@ div.categorys{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    background-color: rgba(157, 153, 153, 0.7);
+    /* background-color: #83677b; */
   }
 
 div.categorys div.row{
@@ -17,9 +17,10 @@ div.categorys div.container-fluid{
 }
 div.category div.page-number{
     
+
     height: 50px;
-    margin: auto;
-    background-color: black;
+    margin: 10px 0 ;
+    background-color: none;
     border-radius: 10px;
     /* margin-top: 10px; */
   
