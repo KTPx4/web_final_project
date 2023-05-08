@@ -1,8 +1,5 @@
 <?php
-  $root_img='http://'.$_SERVER['HTTP_HOST'] . "/public/img/";
-  $HOST = "http://".$_SERVER['HTTP_HOST'];
-  define('HOST', $HOST);
-  
+
   // Bắt đầu session
   if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -26,15 +23,17 @@
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta root-img="<?= ROOT_IMG ?>" />
+    <meta root-trailer="<?= ROOT_TRAILER ?>" />
+
     <title><?=$title?></title>
+    <link rel="icon" type="image/x-icon" href="<?=ROOT_IMG?>logo/Logo.ico">
 
+    <!-- public css -->
     <link rel="stylesheet" href="<?=HOST?>/public/css/home.css" type="text/css">
-    
     <link rel="stylesheet" href="<?=HOST?>/public/css/<?=$pathCss?>" type="text/css">
-
     <link rel="stylesheet" href="<?=HOST?>/public/css/cssElm.css" type="text/css">
-    <link rel="stylesheet" href="<?=HOST?>/public/css/cssImg.css" type="text/css">
+    
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
    
@@ -47,7 +46,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <!-- public js -->
-    <script src="<?=HOST?>/public/js/account/script.js"></script>
+    <script src="<?=HOST?>/public/js/script.js"></script>
+    <!-- <script src="<?=HOST?>/public/js/<?=$title?>.js"></script> -->
 
   </head>
   <body>
@@ -55,8 +55,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="javascript:void(0)">
-            <img src="<?=$root_img?>logo/Logo.png" alt="Logo" class="img-logo"> 
-            <h4 class="text-logo">ANIME</h4>
+            <img src="<?=ROOT_IMG?>logo/Logo.png" alt="Logo" class="img-logo"> 
+            <h4 class="text-logo" style="color: #46E1FF">ANIME</h4>
           </a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -67,11 +67,11 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">GENRES</a>
                   <ul class="dropdown-menu dropdown-content">
-                    <li><a class="dropdown-item" href="#">Detective</a></li>
-                    <li><a class="dropdown-item" href="#">Adventure</a></li>
-                    <li><a class="dropdown-item" href="#">Action Anime</a></li>
-                    <li><a class="dropdown-item" href="#">Romantic Comedy</a></li>
-                    <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+                    <li><a class="dropdown-item type-category" href="" type-value="CAT01">Detective</a></li>
+                    <li><a class="dropdown-item type-category" href="" type-value="CAT02">Adventure</a></li>
+                    <li><a class="dropdown-item type-category" href="" type-value="CAT03">Action Anime</a></li>
+                    <li><a class="dropdown-item type-category" href="" type-value="CAT04">Romantic Comedy</a></li>
+                    <li><a class="dropdown-item type-category" href="" type-value="CAT05">Science Fiction</a></li>
                   </ul>
 
               </li>  
@@ -79,10 +79,10 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">TOP ANIME</a>
                 <ul class="dropdown-menu dropdown-content">
-                  <li><a class="dropdown-item" href="#">By Season</a></li>
-                  <li><a class="dropdown-item" href="#">By Day</a></li>
-                  <li><a class="dropdown-item" href="#">By Month</a></li>
-                  <li><a class="dropdown-item" href="#">By Year</a></li>
+                  <li><a class="dropdown-item type-category" href="#">By Season</a></li>
+                  <li><a class="dropdown-item type-category" href="#">By Day</a></li>
+                  <li><a class="dropdown-item type-category" href="#">By Month</a></li>
+                  <li><a class="dropdown-item type-category" href="#">By Year</a></li>
                 </ul>
               </li>  
 
@@ -92,31 +92,31 @@
                   <div class="row">
                     <div class="col-md-5">
                       <h6 class="dropdown-header">2023</h6>
-                      <a class="dropdown-item" href="#">Spring</a>
-                      <a class="dropdown-item" href="#">Summer</a>
-                      <a class="dropdown-item" href="#">Autumn</a>
-                      <a class="dropdown-item" href="#">Winter</a>
+                      <a class="dropdown-item type-category" href="#">Spring</a>
+                      <a class="dropdown-item type-category" href="#">Summer</a>
+                      <a class="dropdown-item type-category" href="#">Autumn</a>
+                      <a class="dropdown-item type-category" href="#">Winter</a>
                     </div>
                     <div class="col-md-5">
                       <h6 class="dropdown-header">2022</h6>
-                      <a class="dropdown-item" href="#">Spring</a>
-                      <a class="dropdown-item" href="#">Summer</a>
-                      <a class="dropdown-item" href="#">Autumn</a>
-                      <a class="dropdown-item" href="#">Winter</a>
+                      <a class="dropdown-item type-category" href="#">Spring</a>
+                      <a class="dropdown-item type-category" href="#">Summer</a>
+                      <a class="dropdown-item type-category" href="#">Autumn</a>
+                      <a class="dropdown-item type-category" href="#">Winter</a>
                     </div>
                     <div class="col-md-5">
                       <h6 class="dropdown-header">2021</h6>
-                      <a class="dropdown-item" href="#">Spring</a>
-                      <a class="dropdown-item" href="#">Summer</a>
-                      <a class="dropdown-item" href="#">Autumn</a>
-                      <a class="dropdown-item" href="#">Winter</a>
+                      <a class="dropdown-item type-category" href="#">Spring</a>
+                      <a class="dropdown-item type-category" href="#">Summer</a>
+                      <a class="dropdown-item type-category" href="#">Autumn</a>
+                      <a class="dropdown-item type-category" href="#">Winter</a>
                     </div>
                     <div class="col-md-5">
                       <h6 class="dropdown-header">2020 </h6>
-                      <a class="dropdown-item" href="#">Spring</a>
-                      <a class="dropdown-item" href="#">Summer</a>
-                      <a class="dropdown-item" href="#">Autumn</a>
-                      <a class="dropdown-item" href="#">Winter</a>
+                      <a class="dropdown-item type-category" href="#">Spring</a>
+                      <a class="dropdown-item type-category" href="#">Summer</a>
+                      <a class="dropdown-item type-category" href="#">Autumn</a>
+                      <a class="dropdown-item type-category" href="#">Winter</a>
                     </div>
                   </div>
                 </ul>
@@ -125,11 +125,11 @@
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">COMMING SOON</a>
                   <ul class="dropdown-menu dropdown-content">
-                    <li><a class="dropdown-item" href="#">Meitantei Conan: Haibara Ai Monogatari</a></li>
-                    <li><a class="dropdown-item" href="#">Aikatsu! 10th Story: Mirai e no Starway</a></li>
-                    <li><a class="dropdown-item" href="#">Sōkyū no Fafner: Behind the Line</a></li>
-                    <li><a class="dropdown-item" href="#">SSSS.Gridman Gekijō Sōshūhen</a></li>
-                    <li><a class="dropdown-item" href="#">Rakudai Majo: Fuuka to Yami no Majo</a></li>
+                    <li><a class="dropdown-item type-category" href="#">Meitantei Conan: Haibara Ai Monogatari</a></li>
+                    <li><a class="dropdown-item type-category" href="#">Aikatsu! 10th Story: Mirai e no Starway</a></li>
+                    <li><a class="dropdown-item type-category" href="#">Sōkyū no Fafner: Behind the Line</a></li>
+                    <li><a class="dropdown-item type-category" href="#">SSSS.Gridman Gekijō Sōshūhen</a></li>
+                    <li><a class="dropdown-item type-category" href="#">Rakudai Majo: Fuuka to Yami no Majo</a></li>
                   </ul>
               </li>
 
@@ -151,10 +151,10 @@
             </form>
             <button  id="dark-mode" class="dark-mode">
                 <div class="img-1">
-                  <img id="img1" class="img-1" src="<?=HOST?>/public/img/logo/brightness1.png" ></img>
+                  <img id="img1" class="img-1" src="<?=ROOT_IMG?>logo/brightness1.png" ></img>
                 </div>
                 <div class="img-2">
-                  <img id="img2" class="img-2" src="<?=HOST?>/public/img/logo/moon2.png" ></img>
+                  <img id="img2" class="img-2" src="<?=ROOT_IMG?>logo/moon2.png" ></img>
                 </div>
             </button>
           </div>
@@ -162,6 +162,8 @@
       </nav>
       
       <div class="body">
+        <div class="d-none" id="my-data" data-json="<?php echo base64_encode($Data); ?>"></div>
+
         <div class="content-body">
           <div class="container-fluid">
                 <div class="row">
@@ -213,13 +215,15 @@
             
         <!-- top film -->
           <div class="top-film">
-            <div class="label-top-film label"><h3>TOP FILM</h3></div>
+            <div class="label-top-film label"><h3>LIST FILM</h3></div>
 
             <div class="film">
               
               <div class="container-fluid">    
-                  
-                      <div class="row ">
+                      <div class="row list-all-film">
+
+                      </div>
+                      <!-- <div class="row ">
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
@@ -235,7 +239,7 @@
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>
                           <div class="col-4 col-md-2"><a href="<?=HOST?>/home/viewFilm?name=top-update-1"><img class="img-top-film" src="<?=HOST?>/public/img/picture/test1.png" alt="top film"></img></a></div>               
                       </div>        
-                   
+                    -->
               </div>
             </div>
             <div class="page-number">
