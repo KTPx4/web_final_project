@@ -3,7 +3,7 @@
     <div class="label-hot-series label"><h3>Hot Series</h3></div>
     <div class="container-fluid">
         
-        <div class="row">
+        <div class="row parent-hotseries" >
             <div class="col-6 col-sm-4 col-xl-2 img">
                 <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
@@ -22,31 +22,9 @@
             <div class="col-6 col-sm-4 col-xl-2 img">
                 <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
             </div>
-           
       
         </div>
-        <div class="row">
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-            <div class="col-6 col-sm-4 col-xl-2 img">
-                <a href=""><img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>
-            </div>
-           
       
-        </div>
        
         
     </div> 

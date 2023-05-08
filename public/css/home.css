@@ -6,7 +6,7 @@
 
 html, body div.body{
    
-    padding: 0;
+    padding: 10px;
 
     /* min-width: 660px; */
     margin: 0 auto;
@@ -33,9 +33,10 @@ div.label{
 }
 
 /* nvbar - menu*/
+
 .navbar{
   height: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -312,7 +313,7 @@ div.topic button.button
 
 div.top-film div.film{
   border-radius: 15px;
-  margin: 20px 30px;
+  margin: 20px 30px 0px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -415,3 +416,7 @@ div.hot-series{
 
 }
 
+.page-number
+{
+  display: none !important;
+}
