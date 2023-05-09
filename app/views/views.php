@@ -25,6 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta root-img="<?= ROOT_IMG ?>" />
     <meta root-trailer="<?= ROOT_TRAILER ?>" />
+    <meta root-host="<?= HOST ?>" />
 
     <title><?=$title?></title>
     <link rel="icon" type="image/x-icon" href="<?=ROOT_IMG?>logo/Logo.ico">
@@ -47,7 +48,7 @@
     
     <!-- public js -->
     <script src="<?=HOST?>/public/js/script.js"></script>
-    <!-- <script src="<?=HOST?>/public/js/<?=$title?>.js"></script> -->
+    <script src="<?=HOST?>/public/js/<?=$title?>.js"></script>
 
   </head>
   <body>
@@ -56,7 +57,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="javascript:void(0)">
             <img src="<?=ROOT_IMG?>logo/Logo.png" alt="Logo" class="img-logo"> 
-            <h4 class="text-logo" style="color: #46E1FF">ANIME</h4>
+            <h4 class="text-logo" >ANIME</h4>
           </a>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -162,7 +163,7 @@
       </nav>
       
       <div class="body">
-        <div class="d-none" id="my-data" data-json="<?php echo base64_encode($Data); ?>"></div>
+        <div class="d-none" id="my-data" data-json="<?php  echo base64_encode($Data); ?>"></div>
 
         <div class="content-body">
           <div class="container-fluid">
@@ -183,24 +184,8 @@
                             <div class="label-top-update label"><h3>Top Update</h3></div>
                             <div class="table-top-update">
                               <table >
-                                <tbody>
+                                <tbody class="tbody-top-update">
   
-                                    <tr class="tr-top-update">   
-                                      
-                                      <div class="card-update">
-                                          <div class="row">
-                                            <div class="col-4 col-sm-3">
-                                                <img class="img-top-update" src="<?=HOST?>/public/img/picture/test1.png" alt="top update" ></img></a>      
-                                            </div>
-                                            <div class="col-8 col-sm-9">
-                                              <div class="description-update"><H5 class="card-text-descr">description 1</H5></div>
-                                            </div>
-  
-                                          </div>
-                                        </div>           
-                                      <!-- <td><a href=""></td>
-                                      <td class=""></td> -->
-                                    </tr>
                                     
                                 </tbody>
                                   

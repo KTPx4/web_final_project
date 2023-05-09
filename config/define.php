@@ -5,7 +5,7 @@
     // define('DB', 'webfilm');
     define('DB', 'webfilm');
     
-    $root_img='http://'.$_SERVER['HTTP_HOST'] . "/public/img/";
+    $root_img='http://'.$_SERVER['HTTP_HOST'] . '/public/img/';
     define('ROOT_IMG', $root_img);
     
     $root_trailer ='http://'.$_SERVER['HTTP_HOST'] . "/public/video-trailer/";

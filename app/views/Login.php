@@ -1,7 +1,6 @@
 <?php
   $root_img='http://'.$_SERVER['HTTP_HOST'] . "/public/img/";
-  $HOST = "http://".$_SERVER['HTTP_HOST'];
-  define('HOST', $HOST);
+
 
 	if (session_status() == PHP_SESSION_NONE)
 	{

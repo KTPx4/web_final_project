@@ -1,22 +1,22 @@
-    <IfModule mod_rewrite.c>
+<IfModule mod_rewrite.c>
 
-        RewriteEngine On
-        
-        RewriteCond %{REQUEST_URI} ^/app
-        RewriteRule ^(.*)$ index.php?url=notfound
-        
-        
-        RewriteCond %{QUERY_STRING} type=(.+)
-        RewriteRule ^category$ index.php?url=home/category?type=%1 [L]
-        
-        RewriteCond %{QUERY_STRING} film=(.+)
-        RewriteRule ^detail$ index.php?url=home/viewDetail?film=%1 [L]
-       
-        
-        RewriteCond %{REQUEST_FILENAME}  !-d
-        RewriteCond %{REQUEST_FILENAME} !-f        
-        RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
-        
+RewriteEngine On
 
-    </IfModule>
+# RewriteCond %{REQUEST_URI} ^/app
+# RewriteRule ^(.*)$ index.php?url=notfound
+
+
+RewriteCond %{QUERY_STRING} type=(.+)
+RewriteRule ^category$ index.php?url=home/category?type=%1 [L]
+
+RewriteCond %{QUERY_STRING} film=(.+)
+RewriteRule ^detail$ index.php?url=home/viewDetail?film=%1 [L]
+
+
+RewriteCond %{REQUEST_FILENAME}  !-d
+RewriteCond %{REQUEST_FILENAME} !-f        
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+
+
+</IfModule>
 
