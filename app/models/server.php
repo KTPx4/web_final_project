@@ -11,13 +11,23 @@
 
         require_once "./category.php";
         
-        if($_SERVER['REQUEST_METHOD'] == 'GET' &&  isset($_GET['type']))
+        if($_SERVER['REQUEST_METHOD'] == 'GET' )
         {
 
             $model = new category;
+            if(isset($_GET['type'])) // request from id category
+            {
+                $datas = $model->get_from_type( $_GET['type'] );
+                // $film = $model->get_from_type($_GET['type']);
+                echo json_encode( $datas);
 
-            // $film = $model->get_from_type($_GET['type']);
-            echo $model->get_from_type( $_GET['type'] );
+            }
+            if(isset($_GET['year'])) // if request year of film
+            {
+                $datas = $model->get_from_year( $_GET['year'] );
+                // $film = $model->get_from_type($_GET['type']);
+                echo json_encode( $datas);
+            }
            
         }
        

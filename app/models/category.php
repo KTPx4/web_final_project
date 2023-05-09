@@ -46,5 +46,15 @@ class category{
             return $data;
 
         }
+        function get_from_year($year)
+        {
+            $query ="select table_film.*, table_category.* FROM table_film INNER JOIN table_category ON table_film.category_id = table_category.category_id WHERE table_film.film_year = '" . $year ."';";;
+           
+            $data = get_DATA($query);
+            // print_r($data);
+            // return json_encode($data);
+            return $data;
+
+        }
     }
 ?>

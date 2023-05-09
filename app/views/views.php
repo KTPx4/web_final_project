@@ -1,18 +1,18 @@
 <?php
 
   // Bắt đầu session
-  if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+//   if (session_status() == PHP_SESSION_NONE) {
+//     session_start();
+// }
 
-  // Lưu giá trị $_GET['film'] vào session
-  if (isset($_GET['film'])) {
-    $_SESSION['film'] = $_GET['film'];
-  }
+//   // Lưu giá trị $_GET['film'] vào session
+//   if (isset($_GET['film'])) {
+//     $_SESSION['film'] = $_GET['film'];
+//   }
 
-  if (isset($_GET['type'])) {
-    $_SESSION['type'] = $_GET['type'];
-  }
+//   if (isset($_GET['type'])) {
+//     $_SESSION['type'] = $_GET['type'];
+//   }
 
 
 ?>
@@ -55,7 +55,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="javascript:void(0)">
+          <a class="navbar-brand" href="http://localhost">
             <img src="<?=ROOT_IMG?>logo/Logo.png" alt="Logo" class="img-logo"> 
             <h4 class="text-logo" >ANIME</h4>
           </a>
@@ -66,79 +66,36 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">GENRES</a>
+                  <a class="nav-link dropdown-toggle dropdown" href="" role="button" data-bs-toggle="dropdown">GENRES</a>
                   <ul class="dropdown-menu dropdown-content">
-                    <li><a class="dropdown-item type-category" href="" type-value="CAT01">Detective</a></li>
-                    <li><a class="dropdown-item type-category" href="" type-value="CAT02">Adventure</a></li>
-                    <li><a class="dropdown-item type-category" href="" type-value="CAT03">Action Anime</a></li>
-                    <li><a class="dropdown-item type-category" href="" type-value="CAT04">Romantic Comedy</a></li>
-                    <li><a class="dropdown-item type-category" href="" type-value="CAT05">Science Fiction</a></li>
+                    <li><a  class="dropdown-item type-category" href="http://localhost/category?type=CAT01" type-value="CAT01">Detective</a></li>
+                    <li><a class="dropdown-item type-category" href="http://localhost/category?type=CAT02" type-value="CAT02">Adventure</a></li>
+                    <li><a class="dropdown-item type-category" href="http://localhost/category?type=CAT03" type-value="CAT03">Action Anime</a></li>
+                    <li><a class="dropdown-item type-category" href="http://localhost/category?type=CAT04" type-value="CAT04">Romantic Comedy</a></li>
+                    <li><a class="dropdown-item type-category" href="http://localhost/category?type=CAT05" type-value="CAT05">Science Fiction</a></li>
                   </ul>
 
               </li>  
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">TOP ANIME</a>
-                <ul class="dropdown-menu dropdown-content">
-                  <li><a class="dropdown-item type-category" href="#">By Season</a></li>
-                  <li><a class="dropdown-item type-category" href="#">By Day</a></li>
-                  <li><a class="dropdown-item type-category" href="#">By Month</a></li>
-                  <li><a class="dropdown-item type-category" href="#">By Year</a></li>
-                </ul>
-              </li>  
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SEASON</a>
-                <ul class="dropdown-menu dropdown-content multi-column">
-                  <div class="row">
-                    <div class="col-md-5">
-                      <h6 class="dropdown-header">2023</h6>
-                      <a class="dropdown-item type-category" href="#">Spring</a>
-                      <a class="dropdown-item type-category" href="#">Summer</a>
-                      <a class="dropdown-item type-category" href="#">Autumn</a>
-                      <a class="dropdown-item type-category" href="#">Winter</a>
-                    </div>
-                    <div class="col-md-5">
-                      <h6 class="dropdown-header">2022</h6>
-                      <a class="dropdown-item type-category" href="#">Spring</a>
-                      <a class="dropdown-item type-category" href="#">Summer</a>
-                      <a class="dropdown-item type-category" href="#">Autumn</a>
-                      <a class="dropdown-item type-category" href="#">Winter</a>
-                    </div>
-                    <div class="col-md-5">
-                      <h6 class="dropdown-header">2021</h6>
-                      <a class="dropdown-item type-category" href="#">Spring</a>
-                      <a class="dropdown-item type-category" href="#">Summer</a>
-                      <a class="dropdown-item type-category" href="#">Autumn</a>
-                      <a class="dropdown-item type-category" href="#">Winter</a>
-                    </div>
-                    <div class="col-md-5">
-                      <h6 class="dropdown-header">2020 </h6>
-                      <a class="dropdown-item type-category" href="#">Spring</a>
-                      <a class="dropdown-item type-category" href="#">Summer</a>
-                      <a class="dropdown-item type-category" href="#">Autumn</a>
-                      <a class="dropdown-item type-category" href="#">Winter</a>
-                    </div>
-                  </div>
-                </ul>
-              </li>  
-
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">COMMING SOON</a>
-                  <ul class="dropdown-menu dropdown-content">
-                    <li><a class="dropdown-item type-category" href="#">Meitantei Conan: Haibara Ai Monogatari</a></li>
-                    <li><a class="dropdown-item type-category" href="#">Aikatsu! 10th Story: Mirai e no Starway</a></li>
-                    <li><a class="dropdown-item type-category" href="#">Sōkyū no Fafner: Behind the Line</a></li>
-                    <li><a class="dropdown-item type-category" href="#">SSSS.Gridman Gekijō Sōshūhen</a></li>
-                    <li><a class="dropdown-item type-category" href="#">Rakudai Majo: Fuuka to Yami no Majo</a></li>
-                  </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">LIBRARY</a>
               
+
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">SCREENING SCHEDULE</a>
+                <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">YEAR</a>
+                <ul class="dropdown-menu dropdown-content year-nvbar">
+                  <!-- <li><a class="dropdown-item type-category" href="#">2021</a></li> -->
+                  
+                </ul>
+              </li>  
+<!-- 
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle dropdown" href="#" role="button" data-bs-toggle="dropdown">LIBRARY</a>
+                  <ul class="dropdown-menu dropdown-content">
+                    <li><a class="dropdown-item type-category" href="#">All Film</a></li>
+                   
+                  </ul>
+              </li> -->
+
+             
             </ul>
 
             <form  class="form-nvbar" action="<?=HOST?>/login" method="POST">

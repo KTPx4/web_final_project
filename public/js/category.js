@@ -1,45 +1,172 @@
 
-
-function addFilm(parent) {
+function addContent()
+{
+    const _DATA_CONTENT = window._DATA_CONTENT; // get data content
+    
+    // console.log(_DATA_CONTENT);
+    if(_DATA_CONTENT)
+    {
+       
       
-    // get data json
-    const encodedData = document.getElementById("my-data").getAttribute("data-json");
-    const de = JSON.parse(atob(encodedData)); // encode json
-    
-    const data = de['data'];
-    // console.log(data);
-    // console.log("hi");
-    // console.log(de['data']); // in ra giá trị film_id của phần tử đầu tiên trong mảng myData
-    // console.log(de); // in ra giá trị film_name của phần tử thứ hai trong mảng myData
-    
-    data.forEach(function(row) {
+        // add data to hot seris
+        let i = 1;
+        let category_names ="Category: ";
+        _DATA_CONTENT.forEach(function(row) {
+          let  ids = row.film_id;
+            let names = row.film_name;
+            let imgs = row.film_name_img;
+            category_names = "Category: " + row.category_name;
+
         
-       let  ids = row.film_id;
-        let names = row.film_name;
-        let imgs = row.film_name_img;
-        let trailer = row.film_name_trailer;
-        let video = row.film_link_video;
-        let category = row.film_category_id;
-
-        addChild(parent, '<div class="col-4 col-sm-4 col-xl-2 img-category-div"><a href=""><img class="img-top-update" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="top update"></a></div>');
-     
-        addChild(parent, '<div class="col-4 col-sm-4 col-xl-2 img-category-div"><a href=""><img class="img-top-update" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="top update"></a></div>');
-     
-        addChild(parent, '<div class="col-4 col-sm-4 col-xl-2 img-category-div"><a href=""><img class="img-top-update" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="top update"></a></div>');
-     
-        addChild(parent, '<div class="col-4 col-sm-4 col-xl-2 img-category-div"><a href=""><img class="img-top-update" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="top update"></a></div>');
-     
-
-        // console.log(row.film_id);
-        // xử lý từng phần tử ở đây
-      });
-  }
-// load page ready
-$(document).ready(function() {
+            let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
+            let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
+            let div_child = '<div class="col-4 col-sm-3 col-md-2 col-xl-2 img">'+
+                              '<a '+info_link+' > <img class="img-top-film" style="width:80px" '+info_img+'> </a></div>'
+          
+            addChild('.category-div', div_child);
+      
+          });
+          $("#label-category").html(category_names);
+    }
     
-    let parent = '.category-div';
-    let child = '<div class="col-4 col-sm-4 col-xl-2 img-category-div"><a href=""><img class="img-top-update" src="'+window._ROOT_IMG+'picture/'+window.imgs+'" alt="top update"></a></div>';
-    window.addFilm(parent, child)
-     
+}
 
+// use ajax for category
+$(document).ready(function() {
+
+    addContent()
+
+    $('.type-category').click(function(event){ // event click on menubar
+  
+ 
+            event.preventDefault(); // chặn chuyển hướng
+            // Xử lý thêm tại đây nếu cần thiết
+        
+          // code xử lý sự kiện khi click vào thẻ a có class="type-category"
+          
+        // get category
+        
+            var types = $(this).attr('type-value');  // get type cate gory
+            var year = $(this).attr('type-year');
+            if(types) // if have choose in column genres
+            {
+              // console.log("ok");
+              let category_names ="Category: ";
+  
+              // use ajax for type category click in nvbar
+              $.ajax({
+                url: "http://localhost/app/models/server.php",
+                type: "GET",
+                data: { type: types },
+                success: function(response){
+                  // Xử lý phản hồi thành công từ server
+                  $('.category-div').html('');
+                  // if()
+                  const decode = JSON.parse(response); // encode json
+                  if(decode)
+                  {
+                    // console.log("ok");
+                    arrFilm = decode['data'];
+                    // console.log(arrFilm);
+                  
+                    
+                    arrFilm.forEach(function(row) {
+                      let  ids = row.film_id;
+                       let names = row.film_name;
+                       let imgs = row.film_name_img;
+                       let trailer = row.film_name_trailer;
+                       let video = row.film_link_video;
+                       let category = row.film_category_id;
+                       category_names = "Category: " + row.category_name;
+  
+                       let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
+                       let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
+                      
+                       let div_child = '<div class="col-4 col-sm-3 col-md-2 col-xl-2 img">'+
+                       '<a '+info_link+' > <img class="img-top-film" style="width:80px" '+info_img+'> </a></div>'
+   
+                      //  console.log(imgs);
+                    
+                       addChild('.category-div', div_child);
+                       
+                       $("#label-category").html(category_names);
+                       //console.log(row.film_id);
+                      // xử lý từng phần tử ở đây
+                     });
+                  }
+                  /*
+    
+                 
+    
+                */
+    
+                },
+                error: function(){
+                  // Xử lý khi có lỗi xảy ra
+                }
+              });
+            }
+            
+            if(year)// nvbar click in column year
+            {
+                 // console.log("ok");
+              let category_names ="Year: ";
+  
+              // use ajax for type category click in nvbar
+              $.ajax({
+                url: "http://localhost/app/models/server.php",
+                type: "GET",
+                data: { year: year },
+                success: function(response){
+
+                  // Xử lý phản hồi thành công từ server
+                  $('.category-div').html('');
+                  // if()
+                  const decode = JSON.parse(response); // encode json
+                  if(decode)
+                  {
+                    // console.log("ok");
+                    arrFilm = decode['data'];
+                    // console.log(arrFilm);
+                  
+                    
+                    arrFilm.forEach(function(row) {
+                      let  ids = row.film_id;
+                       let names = row.film_name;
+                       let imgs = row.film_name_img;
+                       let trailer = row.film_name_trailer;
+                       let video = row.film_link_video;
+                       let category = row.film_category_id;
+                    
+                       category_names = "Year: " + row.film_year;
+  
+                       let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
+                       let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
+                      
+                       let div_child = '<div class="col-4 col-sm-3 col-md-2 col-xl-2 img">'+
+                       '<a '+info_link+' > <img class="img-top-film" style="width:80px" '+info_img+'> </a></div>'
+   
+                      //  console.log(imgs);
+                    
+                       addChild('.category-div', div_child);
+                       
+                       $("#label-category").html(category_names);
+                       //console.log(row.film_id);
+                      // xử lý từng phần tử ở đây
+                     });
+                  }
+                
+    
+                },
+                error: function(){
+                  // Xử lý khi có lỗi xảy ra
+                }
+              });
+            }
+
+            // console.log(types);
+           
+          
+  });
+  
 });

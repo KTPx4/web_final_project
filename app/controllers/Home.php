@@ -34,8 +34,14 @@
                 $data_all_film = "";
                 $data_top_6 = ""; // top update
                 $data_content = "";
+                $data_year= "";
 
-
+                // get all year
+                $arr_year = $model_film->get_all_year();
+                if($arr_year['code'] == 0)
+                {
+                    $data_year = $arr_year['data'];
+                }
 
                 // get all list film
                 $arr_all_film = $model_film->get_all_film();
@@ -80,7 +86,8 @@
                 $arr_Data = array(
                     'list_film' => $data_all_film,
                     'top_update'=>$data_top_6,
-                    'content' => $data_content
+                    'content' => $data_content,
+                    'year' => $data_year
                 );
 
                 $Data = json_encode($arr_Data);
