@@ -148,7 +148,7 @@ div.hot-series div.row{
 margin-bottom: 10px;
 }
 div.hot-series div.row div.col-4{
-/* margin: 10px 0 10px 0 ; */
+  margin: 10px 0 10px 0 !important;
 }
 
 

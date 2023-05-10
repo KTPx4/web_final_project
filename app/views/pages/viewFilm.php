@@ -25,8 +25,8 @@
                     </div>
                  -->
                     <div class="ratio ratio-16x9">
-                        <video controls>
-                            <source src="<?=HOST?>/public/video-trailer/DETECTIVE CONAN_ THE SCARLET BULLET.mp4" type="video/mp4">
+                        <video controls class="div-video">
+
                         </video>
                     </div>
                 </div>
@@ -131,12 +131,10 @@
                 <div>
                     <div class="description-film">
                         <div class="img-film">
-                            <img src="<?=HOST?>/public/img/picture/test1.png" alt="" class="img-film-1">
+                            
                         </div>
                         <div class="descr">
-                            <h4>hi</h4>
-                            <h5>hooh</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officia laborum molestias aliquam minima recusandae assumenda quos provident veritatis ipsa?</p>
+                           
                         </div>
                     </div>
 
@@ -165,76 +163,8 @@
                             </div>
                             <div class="peo-cmt">
                                 
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
-                                    <div class="info-cmt">
-                                        <div class="name"><p>name</p></div>
-                                        <div class="text-cmt">
-                                            <div class="text-peo-cmt">
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>                                                    
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
-                                    <div class="info-cmt">
-                                        <div class="name"><p>name</p></div>
-                                        <div class="text-cmt">
-                                            <div class="text-peo-cmt">
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>                                                    
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
-                                    <div class="info-cmt">
-                                        <div class="name"><p>name</p></div>
-                                        <div class="text-cmt">
-                                            <div class="text-peo-cmt">
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>                                                    
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
-                                    <div class="info-cmt">
-                                        <div class="name"><p>name</p></div>
-                                        <div class="text-cmt">
-                                            <div class="text-peo-cmt">
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>                                                    
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="cmt cmt-4">
-                                    <div class="avt"><p><i class="fas fa-user-circle" style="color: #0056eb;"></i></p></div>
-                                    <div class="info-cmt">
-                                        <div class="name"><p>name</p></div>
-                                        <div class="text-cmt">
-                                            <div class="text-peo-cmt">
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>
-                                                <p>text cmt</p>                                                    
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
+                               
+                               
                             </div>
                               
                                 

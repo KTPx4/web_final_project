@@ -27,50 +27,77 @@ const encodedData = document.getElementById("my-data").getAttribute("data-json")
       const _DATA_TOP_UPDATE = decode['top_update'];
       const _DATA_LIST_FILM = decode['list_film'];
       const _DATA_CONTENT =  decode['content'];
-      window._DATA_CONTENT = _DATA_CONTENT; // write to local variable use for an other file js
-    
-      
-      _DATA_LIST_FILM.forEach(function(row) {
-          let  ids = row.film_id;
-            let names = row.film_name;
-            let imgs = row.film_name_img;
-            let trailer = row.film_name_trailer;
-            let video = row.film_link_video;
-            let category = row.film_category_id;
-        
-            let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
-            let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
-            let div_child = '<div class="col-4 col-sm-4 col-xl-2 img-category-div">'+
-                              '<a '+info_link+' > <img class="img-top-film" '+info_img+'> </a></div>'
-          
-            addChild('.list-all-film', div_child);
-      
-          });
+      const _DATA_YEAR = decode['year'];
 
-      _DATA_TOP_UPDATE.forEach(function(row) {
-          let  ids = row.film_id;
-            let names = row.film_name;
-            let imgs = row.film_name_img;
-            let trailer = row.film_name_trailer;
-            let video = row.film_link_video;
-            let category = row.film_category_id;
+      const _DATA_CMT = decode['comment'];
+      const _DATA_FILM = decode['film'];
+
+      window._DATA_CONTENT = _DATA_CONTENT; // write to local variable use for an other file js
+      window._DATA_CMT = _DATA_CMT; // write to local variable use for an other file js
+      window._DATA_FILM = _DATA_FILM; // write to local variable use for an other file js
+
+      if(_DATA_LIST_FILM)
+      {
+        _DATA_LIST_FILM.forEach(function(row) { // list item near footer
+            let  ids = row.film_id;
+              let names = row.film_name;
+              let imgs = row.film_name_img;
+              let trailer = row.film_name_trailer;
+              let video = row.film_link_video;
+              let category = row.film_category_id;
+          
+              let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
+              let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
+              let div_child = '<div class="col-4 col-sm-3 col-md-2 col-xl-2 img-category-div">'+
+                                '<a '+info_link+' > <img class="img-top-film" '+info_img+'> </a></div>'
+            
+              addChild('.list-all-film', div_child);
         
-            let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
-            let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
-          
-            let div_child =' <tr class="tr-top-update"> ' +
-                                '<td> <a '+info_link+' >' +
-                                  '<div class="card-update"><div class="row" style="width: 100%;">' +
-                                      '<div class="col-6 col-sm-4"> <img class="img-top-update" '+info_img+' ></img> </div>' +
-                                      '<div class="col-6 col-sm-8"><div class="description-update"><p class="card-text-descr">'+names+'</p></div>'+
-                                      '</div></div>'+
-                                  '</div>' +
-                                '</a>   </td>' +
-                              '</tr>';
-          
-            addChild('.tbody-top-update', div_child);
+            });
+      }
       
-          });
+      if(_DATA_TOP_UPDATE) // list film in the right
+      {
+        _DATA_TOP_UPDATE.forEach(function(row) { // list update in the right
+            let  ids = row.film_id;
+              let names = row.film_name;
+              let imgs = row.film_name_img;
+              let trailer = row.film_name_trailer;
+              let video = row.film_link_video;
+              let category = row.film_category_id;
+          
+              let info_img = 'title="'+names+'" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="'+names+'"'; // link img
+              let info_link = 'title="'+names+'" href="' + _ROOT_HOST + '/views?film=' +ids + '&type=0"'; // views trailer
+            
+              let div_child =' <tr class="tr-top-update"> ' +
+                                  '<td> <a '+info_link+' >' +
+                                    '<div class="card-update"><div class="row" style="width: 100%;">' +
+                                        '<div class="col-6 col-sm-4"> <img class="img-top-update" '+info_img+' ></img> </div>' +
+                                        '<div class="col-6 col-sm-8"><div class="description-update"><p class="card-text-descr">'+names+'</p></div>'+
+                                        '</div></div>'+
+                                    '</div>' +
+                                  '</a>   </td>' +
+                                '</tr>';
+            
+              addChild('.tbody-top-update', div_child);
+        
+            });
+      }
+
+      if(_DATA_YEAR)
+      {
+          _DATA_YEAR.forEach(function(row) { // list update in the right
+            
+              // console.log(row);
+              let years = row.film_year;
+
+              let div_child ='<li><a class="dropdown-item type-category" href="" type-year='+years+'>'+years+'</a></li>';
+            
+              addChild('.year-nvbar', div_child);
+        
+            });
+      }
+
     }
 }
 
@@ -113,7 +140,7 @@ addMain_content(); // fill value to page
  
 var clicked = false;
 
-// restore dark mode 
+// restore cookie dark mode 
 var darkMode = getCookie("darkMode");
   if (darkMode === "true") {
       //Thiết lập lại trạng thái của giao diện ở chế độ light
@@ -169,57 +196,6 @@ $("#dark-mode").click(function() {
 });
 
 // menubar click
-$('.type-categoryssssssssssss').click(function(event){
-  
- 
-    event.preventDefault(); // chặn chuyển hướng
-    // Xử lý thêm tại đây nếu cần thiết
-
-  // code xử lý sự kiện khi click vào thẻ a có class="type-category"
-  
-// get category
-
-          var types = $(this).attr('type-value'); 
-          $.ajax({
-            url: "http://localhost/app/models/server.php",
-            type: "GET",
-            data: { type: types },
-            success: function(response){
-              // Xử lý phản hồi thành công từ server
-              $('.parent-hotseries').html('');
-              const decode = JSON.parse(response); // encode json
-              console.log(decode);
-              /*
-
-              arrFilm = decode['data'];
-              // console.log(arrFilm);
-            
-            
-              arrFilm.forEach(function(row) {
-                let  ids = row.film_id;
-                 let names = row.film_name;
-                 let imgs = row.film_name_img;
-                 let trailer = row.film_name_trailer;
-                 let video = row.film_link_video;
-                 let category = row.film_category_id;
-                //  console.log(imgs);
-              
-                 addChild('.parent-hotseries', '<div class="col-6 col-sm-4 col-xl-2 img"><a href=""><img class="img-top-update" src="'+_ROOT_IMG+'picture/'+imgs+'" alt="top update" ></img></a></div>');
-                 
-         
-                 //console.log(row.film_id);
-                // xử lý từng phần tử ở đây
-               });
-
-            */
-
-            },
-            error: function(){
-              // Xử lý khi có lỗi xảy ra
-            }
-          });
-        
-});
 
 
 // topic at home action follow to screen 
